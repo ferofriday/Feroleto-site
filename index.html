@@ -3,7 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Frank Feroleto</title>
+<title>Frank Feroleto | Organic kitchen and cutting gardens in Fairfield County</title>
+<meta name="theme-color" content="#C8AA7E">
+<link rel="canonical" href="https://frankferoleto.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://frankferoleto.com/">
+<meta property="og:title" content="Frank Feroleto | Feroleto Garden Co.">
+<meta property="og:description" content="Organic kitchen and cutting gardens for private homes in Fairfield County, Connecticut.">
+<meta property="og:image" content="https://frankferoleto.com/photos/share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2322301E'/%3E%3Cpath d='M32 10 C46 20 46 44 32 54 C18 44 18 20 32 10 Z' fill='%23C8AA7E'/%3E%3Cpath d='M32 16 V50' stroke='%2322301E' stroke-width='2'/%3E%3C/svg%3E">
 <meta name="description" content="Frank Feroleto designs, plants and tends organic kitchen and cutting gardens for private homes in Fairfield County, Connecticut, and manages the market garden at Wakeman Town Farm.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,6 +40,39 @@ body { margin: 0; background: var(--oat); color: var(--ink); font-family: var(--
 img { max-width: 100%; display: block; height: auto; }
 a { color: var(--beet); }
 :focus-visible { outline: 3px solid var(--beet); outline-offset: 3px; }
+::selection { background: var(--beet); color: var(--paper); }
+section[id] { scroll-margin-top: 76px; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+.eyebrow { margin: 0; font: 700 12.5px/1.4 var(--body); letter-spacing: 0.18em; text-transform: uppercase; color: var(--moss); }
+
+/* ---------- top bar ---------- */
+.bar { position: fixed; top: 0; left: 0; right: 0; z-index: 40; background: var(--paper); border-bottom: 1px solid var(--ink); transform: translateY(-101%); transition: transform 0.35s ease; }
+.bar.on { transform: none; }
+.bar-in { max-width: 1264px; margin: 0 auto; padding: 0 32px; min-height: 60px; display: flex; align-items: center; gap: 28px; }
+.bar-name { font-family: var(--display); font-size: 21px; color: var(--ink); text-decoration: none; margin-right: auto; white-space: nowrap; }
+.bar-name span { color: var(--beet); }
+.bar-links { display: flex; gap: 24px; font-size: 15.5px; }
+.bar-links a { color: var(--ink); text-decoration: none; padding: 6px 0; border-bottom: 1.5px solid transparent; }
+.bar-links a:hover { border-bottom-color: var(--ink); }
+.bar .btn { min-height: 40px; padding: 8px 16px; font-size: 14.5px; }
+.bar-menu { display: none; }
+@media (max-width: 900px) {
+  body { padding-top: 56px; }
+  .bar { transform: none; }
+  .bar-in { padding: 0 18px; min-height: 56px; gap: 10px; }
+  .bar-name { font-size: 19px; }
+  .bar-menu { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 8px 12px; border: 1.5px solid var(--ink); background: transparent; color: var(--ink); font: 700 14.5px/1 var(--body); cursor: pointer; }
+  .bar-links { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0; background: var(--paper); border-bottom: 1.5px solid var(--ink); padding: 6px 18px 14px; font-size: 18px; }
+  .bar.open .bar-links { display: flex; }
+  .bar-links a { padding: 13px 0; border-bottom: 1px solid var(--sage); }
+  .bar-links a:last-child { border-bottom: 0; }
+  .hero .nav { display: none; }
+}
+@media (max-width: 380px) { .bar .btn { display: none; } }
+
+/* ---------- reveal on scroll ---------- */
+.rv { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s cubic-bezier(.2,.7,.2,1); }
+.rv.in { opacity: 1; transform: none; }
 .wrap { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
 @media (max-width: 600px) { .wrap { padding: 0 18px; } }
 .sprig line { stroke: currentColor; stroke-width: 1.25; }
@@ -43,7 +87,7 @@ h2.sec-title { margin: 0; font-family: var(--display); font-weight: 400; font-si
 .nav a { color: var(--ink); text-decoration: none; border-bottom: 1.5px solid transparent; padding: 4px 0; }
 .nav a:hover { border-bottom-color: var(--ink); }
 .hero-txt { margin-top: auto; padding-top: 48px; }
-.hero h1 { margin: 0; font-family: var(--display); font-weight: 400; color: var(--ink); font-size: clamp(64px, 9.4vw, 148px); line-height: 0.86; letter-spacing: -0.01em; }
+.hero h1 { margin: 0; font-family: var(--display); font-weight: 400; color: var(--ink); font-size: clamp(54px, 7.4vw, 128px); line-height: 0.88; letter-spacing: -0.01em; }
 .hero h1 span { display: block; }
 .hero h1 span + span { color: var(--beet); }
 .hero .sprig { color: var(--ink); margin: 28px 0 22px; }
@@ -66,26 +110,30 @@ h2.sec-title { margin: 0; font-family: var(--display); font-weight: 400; font-si
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; min-height: 0; }
   .hero-l { padding: 20px 22px 36px; }
-  .hero-txt { padding-top: 56px; }
-  .hero-r { aspect-ratio: 4 / 3; }
+  .hero-txt { padding-top: 30px; }
+  .hero h1 { font-size: min(16.5vw, 120px); }
+  .hero-r { order: -1; aspect-ratio: 4 / 4.6; max-height: 70vh; width: 100%; }
+  .hero-r img { object-position: 50% 45%; }
 }
 
 /* ---------- about ---------- */
-.about { padding: 96px 0 80px; }
-.about .wrap { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 64px; align-items: baseline; }
-.about .body p { font-size: clamp(19px, 1.7vw, 22px); line-height: 1.55; margin: 0; }
+.about { padding: 104px 0 96px; text-align: center; }
+.about .wrap { display: grid; justify-items: center; gap: 22px; }
+.about h2 { font: 700 12.5px/1.4 var(--body); letter-spacing: 0.18em; text-transform: uppercase; color: var(--moss); margin: 0; }
+.about .sprig { color: var(--ink); }
+
 .about .big { margin: 0; font-size: clamp(26px, 3vw, 38px); line-height: 1.3; font-style: italic; text-wrap: pretty; }
 .about .big b { font-style: normal; color: var(--beet); }
-.about .body p { margin: 0 0 18px; max-width: 34em; text-wrap: pretty; }
+.about .body p { margin: 0; max-width: 27em; font-size: clamp(22px, 2.5vw, 32px); line-height: 1.42; text-wrap: balance; }
 .facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin: 34px 0 0; padding: 0; }
 .facts div { border-top: 2px solid var(--ink); padding-top: 10px; }
 .facts dt { font-family: var(--display); font-size: 30px; line-height: 1; color: var(--beet); }
 .facts dd { margin: 6px 0 0; font-size: 15.5px; line-height: 1.4; }
-@media (max-width: 860px) { .about { padding: 72px 0 56px; } .about .wrap { grid-template-columns: 1fr; gap: 28px; } }
+@media (max-width: 860px) { .about { padding: 68px 0 64px; } }
 @media (max-width: 520px) { .facts { grid-template-columns: 1fr; } }
 
 /* ---------- work ---------- */
-.work { padding: 0 0 40px; }
+.work { padding-bottom: 40px; }
 .work-head { display: flex; justify-content: space-between; align-items: end; gap: 20px; border-bottom: 1px solid var(--ink); padding-bottom: 16px; margin-bottom: 48px; }
 .job { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0; background: var(--paper); border: 1.5px solid var(--ink); margin-bottom: 40px; }
 .job.flip .job-img { order: 2; border-right: 0; border-left: 1.5px solid var(--ink); }
@@ -93,7 +141,7 @@ h2.sec-title { margin: 0; font-family: var(--display); font-weight: 400; font-si
 .job-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .job-txt { padding: 48px 48px 44px; display: flex; flex-direction: column; }
 .job-txt h3 { margin: 0; font-family: var(--display); font-weight: 400; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.02; }
-.job-txt .role { margin: 10px 0 0; font-style: italic; color: var(--beet); }
+.job-txt .role { margin: 0 0 14px; order: -1; font: 700 12.5px/1.4 var(--body); letter-spacing: 0.18em; text-transform: uppercase; color: var(--beet); }
 .job-txt p { margin: 18px 0 0; max-width: 32em; }
 .job-txt ul { list-style: none; margin: 24px 0 0; padding: 0; border-top: 1px solid var(--sage); }
 .job-txt li { display: grid; grid-template-columns: 9.5em minmax(0, 1fr); gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--sage); font-size: 16px; }
@@ -109,21 +157,24 @@ h2.sec-title { margin: 0; font-family: var(--display); font-weight: 400; font-si
   .job-txt li { grid-template-columns: 1fr; gap: 0; }
 }
 
-.hero .kick { margin: 0 0 14px; font-style: italic; font-size: 19px; }
+.hero .kick { margin: 0 0 18px; color: var(--ink); }
 .hero .tagline { margin: 0; font-size: clamp(22px, 2.3vw, 29px); line-height: 1.32; max-width: 21em; text-wrap: balance; }
 .hero .lede { margin-top: 14px; font-size: 17.5px; line-height: 1.55; max-width: 32em; }
-.head-note { margin: 0; font-style: italic; color: var(--moss); }
-.services { padding: 10px 0 30px; }
+.head-note { margin: 0 0 6px; text-align: right; }
+@media (max-width: 700px) { .work-head, .g-head { flex-direction: column; align-items: start; gap: 10px; } .head-note { text-align: left; margin: 0; } }
+.services { padding-top: 10px; padding-bottom: 30px; }
 .svc { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: 56px; align-items: start; }
-.svc-img { position: sticky; top: 24px; border: 1.5px solid var(--ink); background: var(--paper); }
+.svc-img { position: sticky; top: 84px; border: 1.5px solid var(--ink); background: var(--paper); }
 .svc-img img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: 50% 22%; }
 .svc-intro { margin: 0; font-size: 20px; line-height: 1.5; font-style: italic; max-width: 30em; }
-.svc-list { list-style: none; margin: 30px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 36px; }
-.svc-list li { border-top: 2px solid var(--ink); padding-top: 14px; }
+.svc-list { list-style: none; counter-reset: svc; margin: 30px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 36px; }
+.svc-list li { counter-increment: svc; border-top: 2px solid var(--ink); padding-top: 14px; }
+.svc-list li::before { content: counter(svc, decimal-leading-zero); display: block; font: 700 12.5px/1 var(--body); letter-spacing: 0.18em; color: var(--moss); margin-bottom: 12px; }
 .svc-list h3 { margin: 0; font-family: var(--display); font-weight: 400; font-size: 24px; line-height: 1.1; color: var(--beet); }
 .svc-list p { margin: 10px 0 0; font-size: 16.5px; line-height: 1.55; }
-.area { margin: 36px 0 26px; padding: 16px 18px; background: var(--paper); border: 1px solid var(--sage); font-size: 16.5px; }
-.area span { display: block; font-style: italic; color: var(--moss); font-size: 14.5px; }
+.svc-foot { margin-top: 40px; padding-top: 22px; border-top: 1px solid var(--sage); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; }
+.area { font-size: 18px; }
+.area span { display: block; margin-bottom: 4px; }
 #wakeman { padding-top: 96px; }
 .job-h { margin: 0; font-family: var(--display); font-weight: 400; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.02; color: var(--ink); }
 .opt { font-weight: 400; font-style: italic; color: var(--moss); font-size: 14px; }
@@ -133,7 +184,7 @@ select { font: 17px/1.45 var(--body); color: var(--ink); background: var(--oat);
 /* ---------- catalog band ---------- */
 .cat { background: var(--kraft) var(--grain); border-top: 3px double var(--ink); border-bottom: 3px double var(--ink); padding: 96px 0; margin-top: 60px; overflow: hidden; }
 .cat .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; align-items: center; }
-.cat .kicker { margin: 0 0 12px; font-style: italic; font-size: 18px; }
+.cat .kicker { margin: 0 0 16px; color: var(--ink); }
 .cat h2 { margin: 0; font-family: var(--display); font-weight: 400; font-size: clamp(44px, 6vw, 84px); line-height: 0.92; color: var(--beet); }
 .cat h2 span { display: block; color: var(--ink); font-size: 0.5em; margin-top: 10px; }
 .cat p.copy { margin: 24px 0 0; max-width: 30em; font-size: 19px; }
@@ -161,24 +212,25 @@ select { font: 17px/1.45 var(--body); color: var(--ink); background: var(--oat);
 @media (max-width: 480px) { .pv-t i, .pv-add { display: none; } .stack { height: 250px; } }
 
 /* ---------- gallery ---------- */
-.gallery { padding: 100px 0 40px; }
+.gallery { padding-top: 110px; padding-bottom: 40px; }
 .g-head { display: flex; justify-content: space-between; align-items: end; gap: 20px; border-bottom: 1px solid var(--ink); padding-bottom: 16px; margin-bottom: 36px; }
-.g-head p { margin: 0; font-style: italic; color: var(--moss); }
+.g-head p { margin: 0 0 6px; }
+@media (max-width: 700px) { .g-head { flex-direction: column; align-items: start; gap: 10px; } .g-head p { margin: 0; } }
 .g-grid { columns: 3 300px; column-gap: 22px; }
 .g-item { break-inside: avoid; margin: 0 0 22px; }
-.g-open { display: block; width: 100%; padding: 0; border: 1.5px solid var(--ink); background: var(--paper); cursor: zoom-in; overflow: hidden; }
-.g-open img { width: 100%; transition: transform 0.5s ease; }
+.g-open { display: block; width: 100%; padding: 0; border: 1px solid var(--ink); background: var(--paper); cursor: zoom-in; overflow: hidden; }
+.g-open img { width: 100%; transition: transform 0.6s ease; }
 .g-open:hover img { transform: scale(1.03); }
 .g-item figcaption { margin-top: 8px; font-style: italic; font-size: 15px; color: var(--moss); }
 .g-grid.js { columns: auto; display: flex; align-items: flex-start; gap: 22px; }
 .g-col { flex: 1 1 0; min-width: 0; }
-@media (max-width: 600px) { .gallery { padding-top: 72px; } .g-grid { columns: 2; column-gap: 12px; } .g-grid.js { gap: 12px; } .g-item { margin-bottom: 16px; } .g-item figcaption { font-size: 13.5px; line-height: 1.35; margin-top: 6px; } .g-head { flex-direction: column; align-items: start; gap: 6px; } }
+@media (max-width: 600px) { .gallery { padding-top: 72px; } .g-grid { columns: 2; column-gap: 12px; } .g-grid.js { gap: 12px; } .g-item { margin-bottom: 16px; } .g-item figcaption { font-size: 13.5px; line-height: 1.35; margin-top: 6px; } }
 
 /* ---------- season note ---------- */
-.season { padding: 60px 0 20px; }
+.season { padding-top: 60px; padding-bottom: 20px; }
 .season .card { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 28px; align-items: center; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); padding: 26px 0; }
 .season .when { font-family: var(--display); color: var(--beet); font-size: 24px; line-height: 1.05; }
-.season .when span { display: block; font-family: var(--body); font-style: italic; color: var(--moss); font-size: 15px; margin-bottom: 4px; }
+.season .when span { display: block; font: 700 12.5px/1.4 var(--body); letter-spacing: 0.18em; text-transform: uppercase; color: var(--moss); margin-bottom: 8px; }
 .season p { margin: 0; font-size: clamp(19px, 2vw, 24px); line-height: 1.45; }
 @media (max-width: 600px) { .season .card { grid-template-columns: 1fr; gap: 10px; } }
 
@@ -188,11 +240,12 @@ select { font: 17px/1.45 var(--body); color: var(--ink); background: var(--oat);
 .contact .intro p { margin: 20px 0 0; max-width: 26em; }
 .contact .direct { margin-top: 28px; display: grid; gap: 10px; font-size: 17px; }
 .contact .direct a { font-weight: 700; }
-.contact .direct span { font-style: italic; color: var(--moss); display: block; font-size: 14.5px; }
+.contact .direct span { display: block; font: 700 12.5px/1.4 var(--body); letter-spacing: 0.18em; text-transform: uppercase; color: var(--moss); margin-bottom: 2px; }
 form { display: grid; gap: 16px; background: var(--paper); border: 1.5px solid var(--ink); padding: 32px; }
 form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 label.f { display: grid; gap: 6px; font-weight: 700; font-size: 15.5px; }
-input, textarea { font: 17px/1.45 var(--body); color: var(--ink); background: var(--oat); border: 1.5px solid var(--ink); padding: 11px 13px; width: 100%; }
+input, textarea { font: 17px/1.45 var(--body); color: var(--ink); background: var(--oat); border: 1.5px solid var(--ink); border-radius: 0; padding: 11px 13px; width: 100%; -webkit-appearance: none; appearance: none; }
+input:focus, textarea:focus { background: #fff; }
 textarea { min-height: 150px; resize: vertical; }
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .form-foot { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
@@ -201,10 +254,17 @@ textarea { min-height: 150px; resize: vertical; }
 
 /* ---------- footer ---------- */
 footer { background: var(--ink); color: var(--paper); }
-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding-top: 34px; padding-bottom: 34px; }
-footer .name { font-family: var(--display); font-size: 24px; color: var(--kraft); }
-footer a { color: var(--paper); }
-footer p { margin: 0; font-size: 15px; }
+footer .wrap { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); gap: 40px; padding-top: 64px; padding-bottom: 28px; }
+footer .name { display: block; font-family: var(--display); font-size: 34px; line-height: 1; color: var(--kraft); }
+footer .sprig { color: var(--sage); margin: 18px 0 14px; }
+footer .sprig .seed { fill: var(--kraft); }
+footer a { color: var(--paper); text-decoration-color: rgba(250, 246, 236, 0.4); text-underline-offset: 3px; }
+footer a:hover { text-decoration-color: var(--paper); }
+footer p { margin: 0; font-size: 16px; max-width: 22em; }
+footer h3 { margin: 0 0 14px; font: 700 12.5px/1.4 var(--body); letter-spacing: 0.18em; text-transform: uppercase; color: var(--sage); }
+footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 16px; }
+footer .fine { grid-column: 1 / -1; border-top: 1px solid rgba(250, 246, 236, 0.2); padding-top: 20px; font-size: 14px; color: var(--sage); max-width: none; }
+@media (max-width: 760px) { footer .wrap { grid-template-columns: 1fr 1fr; gap: 32px 24px; padding-top: 48px; } footer .f-id { grid-column: 1 / -1; } }
 
 /* ---------- lightbox ---------- */
 .lb { position: fixed; inset: 0; z-index: 50; background: rgba(20, 28, 18, 0.92); display: none; align-items: center; justify-content: center; padding: 64px 72px; }
@@ -223,13 +283,24 @@ footer p { margin: 0; font-size: 15px; }
 </head>
 <body>
 
+<div class="bar" id="bar">
+<div class="bar-in">
+<a class="bar-name" href="#top">Frank <span>Feroleto</span></a>
+<nav class="bar-links" id="bar-links" aria-label="Site">
+<a href="#about">About</a><a href="#services">Services</a><a href="#catalog">Catalog</a><a href="#wakeman">Wakeman Town Farm</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+</nav>
+<a class="btn" href="#contact">Inquire</a>
+<button class="bar-menu" type="button" id="bar-menu" aria-expanded="false" aria-controls="bar-links">Menu</button>
+</div>
+</div>
+
 <header class="hero" id="top">
 <div class="hero-l">
 <nav class="nav" aria-label="Main">
 <a href="#about">About</a><a href="#services">Services</a><a href="#catalog">Catalog</a><a href="#wakeman">Wakeman Town Farm</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
 </nav>
 <div class="hero-txt">
-<p class="kick">Feroleto Garden Co.</p>
+<p class="kick eyebrow">Feroleto Garden Co.</p>
 <h1><span>Frank</span><span>Feroleto</span></h1>
 <svg class="sprig" width="200" height="24" viewBox="0 0 220 26" aria-hidden="true"><line x1="0" y1="13" x2="80" y2="13"></line><line x1="140" y1="13" x2="220" y2="13"></line><ellipse cx="68" cy="8.5" rx="8" ry="2.8" transform="rotate(-22 68 8.5)"></ellipse><ellipse cx="86" cy="17.5" rx="8" ry="2.8" transform="rotate(22 86 17.5)"></ellipse><ellipse cx="152" cy="8.5" rx="8" ry="2.8" transform="rotate(22 152 8.5)"></ellipse><ellipse cx="134" cy="17.5" rx="8" ry="2.8" transform="rotate(-22 134 17.5)"></ellipse><path class="seed" d="M110 4 C117 8 117 18 110 22 C103 18 103 8 110 4 Z"></path></svg>
 <p class="tagline">Organic kitchen and cutting gardens for private homes in Fairfield County.</p>
@@ -243,7 +314,8 @@ footer p { margin: 0; font-size: 15px; }
 <main>
 <section class="about" id="about" aria-labelledby="about-h">
 <div class="wrap">
-<h2 class="sec-title" id="about-h">About</h2>
+<h2 id="about-h">About</h2>
+<svg class="sprig" width="200" height="24" viewBox="0 0 220 26" aria-hidden="true"><line x1="0" y1="13" x2="80" y2="13"></line><line x1="140" y1="13" x2="220" y2="13"></line><ellipse cx="68" cy="8.5" rx="8" ry="2.8" transform="rotate(-22 68 8.5)"></ellipse><ellipse cx="86" cy="17.5" rx="8" ry="2.8" transform="rotate(22 86 17.5)"></ellipse><ellipse cx="152" cy="8.5" rx="8" ry="2.8" transform="rotate(22 152 8.5)"></ellipse><ellipse cx="134" cy="17.5" rx="8" ry="2.8" transform="rotate(-22 134 17.5)"></ellipse><path class="seed" d="M110 4 C117 8 117 18 110 22 C103 18 103 8 110 4 Z"></path></svg>
 <div class="body">
 <p>I'm an organic grower with more than fifteen years of experience. I run Feroleto Garden Co., caring for a small number of private gardens across Fairfield County, and I manage the market garden at Wakeman Town Farm in Westport.</p>
 </div>
@@ -251,7 +323,7 @@ footer p { margin: 0; font-size: 15px; }
 </section>
 
 <section class="services wrap" id="services" aria-labelledby="svc-h">
-<div class="work-head"><h2 class="sec-title" id="svc-h">Feroleto Garden Co.</h2><p class="head-note">Private garden care in Fairfield County</p></div>
+<div class="work-head"><h2 class="sec-title" id="svc-h">Feroleto Garden Co.</h2><p class="head-note eyebrow">Private garden care</p></div>
 <div class="svc">
 <div class="svc-img"><img src="photos/lettuce-peas.webp" alt="Heads of red and green lettuce in a raised bed, with peas climbing a trellis behind" width="788" height="1400" loading="lazy"></div>
 <div class="svc-body">
@@ -262,8 +334,7 @@ footer p { margin: 0; font-size: 15px; }
 <li><h3>Seasonal planning</h3><p>A planting plan for each season, chosen with you from my annual catalog, with crop rotations to keep the beds productive.</p></li>
 <li><h3>Soil health</h3><p>Soil testing and organic amendments to build fertility over time.</p></li>
 </ol>
-<div class="area"><span>Serving</span>Fairfield County, Connecticut</div>
-<a class="btn" href="#contact">Inquire about a garden</a>
+<div class="svc-foot"><div class="area"><span class="eyebrow">Serving</span>Fairfield County, Connecticut</div><a class="btn" href="#contact">Inquire about a garden</a></div>
 </div>
 </div>
 </section>
@@ -271,7 +342,7 @@ footer p { margin: 0; font-size: 15px; }
 <section class="cat" id="catalog" aria-labelledby="cat-h">
 <div class="wrap">
 <div>
-<p class="kicker">For clients of Feroleto Garden Co.</p>
+<p class="kicker eyebrow">For clients of Feroleto Garden Co.</p>
 <h2 id="cat-h">2027 <span>Garden Catalog</span></h2>
 <p class="copy">Each year I publish a catalog of the vegetables, herbs, fruit and flowers I will grow for the coming season. Clients choose what they would like and send me their list, and I plan their beds around it.</p>
 <a class="btn" href="catalog/index.html">Browse the 2027 catalog</a>
@@ -293,7 +364,7 @@ footer p { margin: 0; font-size: 15px; }
 </section>
 
 <section class="gallery wrap" id="gallery" aria-labelledby="gal-h">
-<div class="g-head"><h2 class="sec-title" id="gal-h">From the garden</h2><p>Tap a photo to see it larger</p></div>
+<div class="g-head"><h2 class="sec-title" id="gal-h">From the garden</h2><p class="eyebrow">Tap a photo to enlarge</p></div>
 <div class="g-grid"><figure class="g-item"><button class="g-open" type="button" data-i="0" aria-label="Enlarge photo: Winter squash trained up the arbor"><img src="photos/squash-arbor.webp" alt="Winter squash trained up the arbor" width="1400" height="1050" loading="lazy" decoding="async"></button><figcaption>Winter squash trained up the arbor</figcaption></figure><figure class="g-item"><button class="g-open" type="button" data-i="1" aria-label="Enlarge photo: Zinnias in orange, pink and coral"><img src="photos/zinnia-field.webp" alt="Zinnias in orange, pink and coral" width="1350" height="1800" loading="lazy" decoding="async"></button><figcaption>Zinnias in orange, pink and coral</figcaption></figure><figure class="g-item"><button class="g-open" type="button" data-i="2" aria-label="Enlarge photo: A crate of heirloom tomatoes"><img src="photos/tomato-harvest.webp" alt="A crate of heirloom tomatoes" width="1050" height="1400" loading="lazy" decoding="async"></button><figcaption>A crate of heirloom tomatoes</figcaption></figure><figure class="g-item"><button class="g-open" type="button" data-i="3" aria-label="Enlarge photo: Café au Lait dahlia"><img src="photos/dahlia-cafe-au-lait.webp" alt="Café au Lait dahlia" width="1050" height="1400" loading="lazy" decoding="async"></button><figcaption>Café au Lait dahlia</figcaption></figure><figure class="g-item"><button class="g-open" type="button" data-i="4" aria-label="Enlarge photo: Radishes and beets in every color"><img src="photos/radishes-beets.webp" alt="Radishes and beets in every color" width="1400" height="1050" loading="lazy" decoding="async"></button><figcaption>Radishes and beets in every color</figcaption></figure><figure class="g-item"><button class="g-open" type="button" data-i="5" aria-label="Enlarge photo: Chrysanthemums in late fall"><img src="photos/chrysanthemums.webp" alt="Chrysanthemums in late fall" width="788" height="1400" loading="lazy" decoding="async"></button><figcaption>Chrysanthemums in late fall</figcaption></figure><figure class="g-item"><button class="g-open" type="button" data-i="6" aria-label="Enlarge photo: Spring asparagus coming up through the straw"><img src="photos/asparagus.webp" alt="Spring asparagus coming up through the straw" width="1050" height="1400" loading="lazy" decoding="async"></button><figcaption>Spring asparagus coming up through the straw</figcaption></figure><figure class="g-item"><button class="g-open" type="button" data-i="7" aria-label="Enlarge photo: Fresh-cut dahlias and zinnias"><img src="photos/farmstand-dahlias.webp" alt="Fresh-cut dahlias and zinnias" width="788" height="1400" loading="lazy" decoding="async"></button><figcaption>Fresh-cut dahlias and zinnias</figcaption></figure><figure class="g-item"><button class="g-open" type="button" data-i="8" aria-label="Enlarge photo: Chioggia and golden beets"><img src="photos/beet-slices.webp" alt="Chioggia and golden beets" width="1050" height="1400" loading="lazy" decoding="async"></button><figcaption>Chioggia and golden beets</figcaption></figure><figure class="g-item"><button class="g-open" type="button" data-i="9" aria-label="Enlarge photo: Strawberries ripening under the leaves"><img src="photos/strawberries.webp" alt="Strawberries ripening under the leaves" width="788" height="1400" loading="lazy" decoding="async"></button><figcaption>Strawberries ripening under the leaves</figcaption></figure><figure class="g-item"><button class="g-open" type="button" data-i="10" aria-label="Enlarge photo: Chard, beets, carrots and greens, just harvested"><img src="photos/hero-harvest-basket.webp" alt="Chard, beets, carrots and greens, just harvested" width="2000" height="1500" loading="lazy" decoding="async"></button><figcaption>Chard, beets, carrots and greens, just harvested</figcaption></figure><figure class="g-item"><button class="g-open" type="button" data-i="11" aria-label="Enlarge photo: Ball dahlias in peach and wine"><img src="photos/ball-dahlias.webp" alt="Ball dahlias in peach and wine" width="788" height="1400" loading="lazy" decoding="async"></button><figcaption>Ball dahlias in peach and wine</figcaption></figure><figure class="g-item"><button class="g-open" type="button" data-i="12" aria-label="Enlarge photo: A head of cauliflower, ready to cut"><img src="photos/cauliflower.webp" alt="A head of cauliflower, ready to cut" width="1050" height="1400" loading="lazy" decoding="async"></button><figcaption>A head of cauliflower, ready to cut</figcaption></figure><figure class="g-item"><button class="g-open" type="button" data-i="13" aria-label="Enlarge photo: Blackberries ripening on the cane"><img src="photos/blackberries.webp" alt="Blackberries ripening on the cane" width="788" height="1400" loading="lazy" decoding="async"></button><figcaption>Blackberries ripening on the cane</figcaption></figure><figure class="g-item"><button class="g-open" type="button" data-i="14" aria-label="Enlarge photo: White breadseed poppy"><img src="photos/white-poppy.webp" alt="White breadseed poppy" width="788" height="1400" loading="lazy" decoding="async"></button><figcaption>White breadseed poppy</figcaption></figure><figure class="g-item"><button class="g-open" type="button" data-i="15" aria-label="Enlarge photo: A handful of red beets"><img src="photos/beets-in-hand.webp" alt="A handful of red beets" width="1050" height="1400" loading="lazy" decoding="async"></button><figcaption>A handful of red beets</figcaption></figure><figure class="g-item"><button class="g-open" type="button" data-i="16" aria-label="Enlarge photo: A bed of bok choy"><img src="photos/bok-choy.webp" alt="A bed of bok choy" width="1050" height="1400" loading="lazy" decoding="async"></button><figcaption>A bed of bok choy</figcaption></figure><figure class="g-item"><button class="g-open" type="button" data-i="17" aria-label="Enlarge photo: Summer squash and nasturtiums in a raised bed"><img src="photos/squash-nasturtium-bed.webp" alt="Summer squash and nasturtiums in a raised bed" width="1600" height="901" loading="lazy" decoding="async"></button><figcaption>Summer squash and nasturtiums in a raised bed</figcaption></figure><figure class="g-item"><button class="g-open" type="button" data-i="18" aria-label="Enlarge photo: Breadseed poppies"><img src="photos/poppies.webp" alt="Breadseed poppies" width="1400" height="1050" loading="lazy" decoding="async"></button><figcaption>Breadseed poppies</figcaption></figure></div>
 </section>
 
@@ -334,8 +405,10 @@ footer p { margin: 0; font-size: 15px; }
 
 <footer>
 <div class="wrap">
-<span class="name">Frank Feroleto</span>
-<p>Feroleto Garden Co. · <a href="https://www.wakemantownfarm.org">Wakeman Town Farm</a> · <a href="https://www.instagram.com/frankvf">@frankvf</a> · © 2026</p>
+<div class="f-id"><span class="name">Frank Feroleto</span><svg class="sprig" width="200" height="24" viewBox="0 0 220 26" aria-hidden="true"><line x1="0" y1="13" x2="80" y2="13"></line><line x1="140" y1="13" x2="220" y2="13"></line><ellipse cx="68" cy="8.5" rx="8" ry="2.8" transform="rotate(-22 68 8.5)"></ellipse><ellipse cx="86" cy="17.5" rx="8" ry="2.8" transform="rotate(22 86 17.5)"></ellipse><ellipse cx="152" cy="8.5" rx="8" ry="2.8" transform="rotate(22 152 8.5)"></ellipse><ellipse cx="134" cy="17.5" rx="8" ry="2.8" transform="rotate(-22 134 17.5)"></ellipse><path class="seed" d="M110 4 C117 8 117 18 110 22 C103 18 103 8 110 4 Z"></path></svg><p>Organic kitchen and cutting gardens for private homes in Fairfield County, Connecticut.</p></div>
+<div><h3>Explore</h3><ul><li><a href="#services">Services</a></li><li><a href="catalog/index.html">2027 Garden Catalog</a></li><li><a href="#gallery">Gallery</a></li><li><a href="https://www.wakemantownfarm.org">Wakeman Town Farm</a></li></ul></div>
+<div><h3>Get in touch</h3><ul><li><a href="#contact">Inquire about a garden</a></li><li><a href="mailto:feroletofrank@gmail.com">feroletofrank@gmail.com</a></li><li><a href="https://www.instagram.com/frankvf">@frankvf on Instagram</a></li></ul></div>
+<p class="fine">© 2026 Feroleto Garden Co.</p>
 </div>
 </footer>
 
@@ -371,6 +444,24 @@ footer p { margin: 0; font-size: 15px; }
     if (ev.key === "ArrowRight") show(cur + 1);
   });
 
+  /* top bar: slides in after the hero on wide screens; a menu on phones */
+  var bar = document.getElementById("bar"), menu = document.getElementById("bar-menu"), hero = document.getElementById("top");
+  function onScroll() { bar.classList.toggle("on", window.scrollY > hero.offsetHeight - 80); }
+  onScroll(); window.addEventListener("scroll", onScroll, { passive: true });
+  function setMenu(o) { bar.classList.toggle("open", o); menu.setAttribute("aria-expanded", o ? "true" : "false"); menu.textContent = o ? "Close" : "Menu"; }
+  menu.addEventListener("click", function () { setMenu(!bar.classList.contains("open")); });
+  document.getElementById("bar-links").addEventListener("click", function (ev) { if (ev.target.tagName === "A") setMenu(false); });
+  document.addEventListener("keydown", function (ev) { if (ev.key === "Escape") setMenu(false); });
+
+  /* swipe between photos in the lightbox */
+  var sx = null;
+  lb.addEventListener("touchstart", function (ev) { sx = ev.touches[0].clientX; }, { passive: true });
+  lb.addEventListener("touchend", function (ev) {
+    if (sx === null) return;
+    var dx = ev.changedTouches[0].clientX - sx; sx = null;
+    if (Math.abs(dx) > 50) show(cur + (dx < 0 ? 1 : -1));
+  });
+
   /* gallery: fill balanced columns left to right so the order reads across */
   var grid = document.querySelector(".g-grid"), figs = Array.prototype.slice.call(grid.children), ncols = 0;
   function layout() {
@@ -385,6 +476,16 @@ footer p { margin: 0; font-size: 15px; }
     });
   }
   layout(); window.addEventListener("resize", layout);
+
+  /* gentle reveal as sections scroll into view */
+  if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
+    }, { rootMargin: "0px 0px -8% 0px" });
+    document.querySelectorAll(".about .wrap, .work-head, .svc-img, .svc-body, .cat .wrap > *, .job, .g-head, .g-item, .season .card, .contact .intro, .contact form").forEach(function (el) {
+      if (el.getBoundingClientRect().top > window.innerHeight * 0.9) { el.classList.add("rv"); io.observe(el); }
+    });
+  }
 
   /* contact form: posts to Netlify Forms on the live site */
   var form = document.getElementById("contact-form"), status = document.getElementById("cf-status");
