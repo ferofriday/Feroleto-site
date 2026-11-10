@@ -114,17 +114,15 @@ h2.sec-title { margin: 0; font-family: var(--display); font-weight: 400; font-si
 .hero .lede { margin-top: 14px; font-size: 17.5px; line-height: 1.55; max-width: 32em; }
 .head-note { margin: 0; font-style: italic; color: var(--moss); }
 .services { padding: 10px 0 30px; }
-.svc { display: block; }
+.svc { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: 56px; align-items: start; }
 .svc-img { position: sticky; top: 24px; border: 1.5px solid var(--ink); background: var(--paper); }
 .svc-img img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
 .svc-intro { margin: 0; font-size: 20px; line-height: 1.5; font-style: italic; max-width: 30em; }
-.svc-list { list-style: none; margin: 30px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px 32px; }
-@media (max-width: 1060px) { .svc-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.svc-list { list-style: none; margin: 30px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 36px; }
 .svc-list li { border-top: 2px solid var(--ink); padding-top: 14px; }
 .svc-list h3 { margin: 0; font-family: var(--display); font-weight: 400; font-size: 24px; line-height: 1.1; color: var(--beet); }
 .svc-list p { margin: 10px 0 0; font-size: 16.5px; line-height: 1.55; }
-.area { display: inline-block; margin: 36px 28px 0 0; padding: 14px 18px; background: var(--paper); border: 1px solid var(--sage); font-size: 16.5px; vertical-align: middle; }
-.svc-body > .btn { margin-top: 36px; vertical-align: middle; }
+.area { margin: 36px 0 26px; padding: 16px 18px; background: var(--paper); border: 1px solid var(--sage); font-size: 16.5px; }
 .area span { display: block; font-style: italic; color: var(--moss); font-size: 14.5px; }
 #wakeman { padding-top: 96px; }
 .job-h { margin: 0; font-family: var(--display); font-weight: 400; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.02; color: var(--ink); }
@@ -252,6 +250,7 @@ footer p { margin: 0; font-size: 15px; }
 <section class="services wrap" id="services" aria-labelledby="svc-h">
 <div class="work-head"><h2 class="sec-title" id="svc-h">Feroleto Garden Co.</h2><p class="head-note">Private garden care in Fairfield County</p></div>
 <div class="svc">
+<div class="svc-img"><img src="photos/lettuce-raised-bed.webp" alt="Romaine and red lettuce growing in a raised bed" width="1350" height="1800" loading="lazy"></div>
 <div class="svc-body">
 <p class="svc-intro">Four services, offered together or on their own. Everything I use in your garden is organic and OMRI-listed.</p>
 <ol class="svc-list">
@@ -285,11 +284,6 @@ footer p { margin: 0; font-size: 15px; }
 <h2 class="job-h" id="wtf-h">Wakeman Town Farm</h2>
 <p class="role">Market garden manager</p>
 <p>Wakeman Town Farm is a nonprofit educational homestead in Westport. As market garden manager, I oversee vegetable and cut flower production, supply the farmstand, and work with the volunteers and interns who come to learn.</p>
-<ul>
-<li><span>The garden</span><span>Vegetables and cut flowers</span></li>
-<li><span>The farmstand</span><span>Fresh harvests through the season</span></li>
-<li><span>Teaching</span><span>Volunteers and interns</span></li>
-</ul>
 <p class="more"><a href="https://www.wakemantownfarm.org">Visit wakemantownfarm.org</a></p>
 </div>
 </article>
@@ -297,7 +291,7 @@ footer p { margin: 0; font-size: 15px; }
 
 <section class="gallery wrap" id="gallery" aria-labelledby="gal-h">
 <div class="g-head"><h2 class="sec-title" id="gal-h">From the garden</h2><p>Tap a photo to see it larger</p></div>
-<div class="g-grid"><figure class="g-item"><button class="g-open" type="button" data-i="0" aria-label="Enlarge photo: A crate of heirloom tomatoes"><img src="photos/tomato-harvest.webp" alt="A crate of heirloom tomatoes" width="1050" height="1400" loading="lazy" decoding="async"></button><figcaption>A crate of heirloom tomatoes</figcaption></figure><figure class="g-item"><button class="g-open" type="button" data-i="1" aria-label="Enlarge photo: Café au Lait dahlia"><img src="photos/dahlia-cafe-au-lait.webp" alt="Café au Lait dahlia" width="1050" height="1400" loading="lazy" decoding="async"></button><figcaption>Café au Lait dahlia</figcaption></figure><figure class="g-item"><button class="g-open" type="button" data-i="2" aria-label="Enlarge photo: Romaine and red lettuce in a raised bed"><img src="photos/lettuce-raised-bed.webp" alt="Romaine and red lettuce in a raised bed" width="1350" height="1800" loading="lazy" decoding="async"></button><figcaption>Romaine and red lettuce in a raised bed</figcaption></figure><figure class="g-item"><button class="g-open" type="button" data-i="3" aria-label="Enlarge photo: Breadseed poppies"><img src="photos/poppies.webp" alt="Breadseed poppies" width="1400" height="1050" loading="lazy" decoding="async"></button><figcaption>Breadseed poppies</figcaption></figure><figure class="g-item"><button class="g-open" type="button" data-i="4" aria-label="Enlarge photo: Pink and yellow dahlia"><img src="photos/dahlia-pink-yellow.webp" alt="Pink and yellow dahlia" width="1050" height="1400" loading="lazy" decoding="async"></button><figcaption>Pink and yellow dahlia</figcaption></figure></div>
+<div class="g-grid"><figure class="g-item"><button class="g-open" type="button" data-i="0" aria-label="Enlarge photo: A crate of heirloom tomatoes"><img src="photos/tomato-harvest.webp" alt="A crate of heirloom tomatoes" width="1050" height="1400" loading="lazy" decoding="async"></button><figcaption>A crate of heirloom tomatoes</figcaption></figure><figure class="g-item"><button class="g-open" type="button" data-i="1" aria-label="Enlarge photo: Café au Lait dahlia"><img src="photos/dahlia-cafe-au-lait.webp" alt="Café au Lait dahlia" width="1050" height="1400" loading="lazy" decoding="async"></button><figcaption>Café au Lait dahlia</figcaption></figure><figure class="g-item"><button class="g-open" type="button" data-i="2" aria-label="Enlarge photo: Breadseed poppies"><img src="photos/poppies.webp" alt="Breadseed poppies" width="1400" height="1050" loading="lazy" decoding="async"></button><figcaption>Breadseed poppies</figcaption></figure><figure class="g-item"><button class="g-open" type="button" data-i="3" aria-label="Enlarge photo: Pink and yellow dahlia"><img src="photos/dahlia-pink-yellow.webp" alt="Pink and yellow dahlia" width="1050" height="1400" loading="lazy" decoding="async"></button><figcaption>Pink and yellow dahlia</figcaption></figure><figure class="g-item"><button class="g-open" type="button" data-i="4" aria-label="Enlarge photo: Cactus dahlia in pink and gold"><img src="photos/dahlia-sunset.webp" alt="Cactus dahlia in pink and gold" width="1050" height="1400" loading="lazy" decoding="async"></button><figcaption>Cactus dahlia in pink and gold</figcaption></figure><figure class="g-item"><button class="g-open" type="button" data-i="5" aria-label="Enlarge photo: Cream dahlia"><img src="photos/dahlia-cream.webp" alt="Cream dahlia" width="1050" height="1400" loading="lazy" decoding="async"></button><figcaption>Cream dahlia</figcaption></figure></div>
 </section>
 
 <section class="season wrap" aria-label="This season">
