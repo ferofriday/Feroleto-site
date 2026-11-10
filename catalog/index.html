@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Feroleto 2027 Garden Catalog</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Ultra&amp;display=swap">
+<style>
+:root {
+  /* One visual world, taken from the printed catalog: kraft and oat paper, field-green ink, beet red for anything picked. */
+  --kraft: #C8AA7E;
+  --kraft-deep: #B8956A;
+  --oat: #EEE6D0;
+  --paper: #FAF6EC;
+  --ink: #22301E;
+  --beet: #7A2231;
+  --moss: #4D5B3D;
+  --sage: #A3AB86;
+  --display: Ultra, "Rockwell Extra Bold", Georgia, serif;
+  --body: "Libre Caslon Text", Georgia, "Times New Roman", serif;
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.2 0 0 0 0 0.15 0 0 0 0 0.05 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { background: var(--oat); }
+body { margin: 0; background: var(--oat); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.5; }
+img { max-width: 100%; display: block; }
+a { color: var(--beet); }
+button { font-family: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--beet); outline-offset: 2px; }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+@media (max-width: 560px) { .wrap { padding: 0 16px; } }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------- hero ---------- */
+.hero { background: var(--kraft) var(--grain); border-bottom: 3px double var(--ink); }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 48px; align-items: center; padding-top: 56px; padding-bottom: 56px; }
+.hero .co { margin: 0; font-family: var(--display); font-size: 22px; letter-spacing: 0.01em; }
+.sprig line { stroke: var(--ink); stroke-width: 1.25; }
+.sprig ellipse { fill: var(--ink); }
+.sprig .seed { fill: var(--beet); }
+.hero .sprig { margin: 14px 0 22px; }
+.hero h1 { margin: 0; font-family: var(--display); font-weight: 400; font-size: clamp(54px, 8vw, 104px); line-height: 0.92; color: var(--beet); }
+.hero h1 span { display: block; color: var(--ink); font-size: 0.46em; line-height: 1.1; margin-top: 10px; }
+.hero .lede { margin: 22px 0 0; font-size: 19px; line-height: 1.55; max-width: 30em; }
+.steps { list-style: none; margin: 28px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; max-width: 560px; }
+.steps li { border-top: 2px solid var(--ink); padding-top: 10px; font-size: 15.5px; line-height: 1.4; }
+.steps b { display: block; font-family: var(--display); font-weight: 400; font-size: 22px; color: var(--beet); line-height: 1; margin-bottom: 6px; }
+.cta { display: inline-flex; align-items: center; gap: 10px; margin-top: 30px; min-height: 50px; padding: 12px 24px; background: var(--ink); color: var(--paper); text-decoration: none; font-weight: 700; font-size: 17px; border: 2px solid var(--ink); }
+.cta:hover { background: var(--beet); border-color: var(--beet); }
+.mosaic { position: relative; display: grid; grid-template-columns: 1.25fr 1fr; grid-template-rows: 1fr 1fr; gap: 12px; aspect-ratio: 1 / 0.9; }
+.mosaic img { width: 100%; height: 100%; object-fit: cover; border: 2px solid var(--ink); background: var(--paper); }
+.mosaic .m0 { grid-row: span 2; }
+.mosaic .m3 { display: none; }
+.stamp { position: absolute; width: 128px; height: 128px; left: -46px; bottom: -34px; transform: rotate(-11deg); }
+.st-bg { fill: var(--kraft); } .st-l3 { fill: none; stroke: var(--beet); stroke-width: 3; } .st-l1 { fill: none; stroke: var(--beet); stroke-width: 1; }
+.st-ring { font-family: var(--body); font-size: 12px; font-weight: 700; letter-spacing: 1.9px; fill: var(--beet); }
+.st-fg { font-family: var(--display); font-size: 22px; fill: var(--beet); } .st-co { font-family: var(--body); font-style: italic; font-size: 14px; fill: var(--beet); }
+@media (max-width: 860px) {
+  .hero .wrap { grid-template-columns: 1fr; gap: 32px; padding-top: 36px; padding-bottom: 40px; }
+  .mosaic { grid-template-columns: repeat(4, minmax(0, 1fr)); grid-template-rows: auto; aspect-ratio: auto; gap: 8px; }
+  .mosaic img { aspect-ratio: 1; }
+  .mosaic .m0 { grid-row: auto; } .mosaic .m3 { display: block; }
+  .stamp { width: 96px; height: 96px; left: auto; right: -6px; top: -60px; bottom: auto; }
+}
+@media (max-width: 560px) { .steps { grid-template-columns: 1fr; gap: 10px; } .steps li { display: flex; gap: 12px; align-items: baseline; } .steps b { margin: 0; } }
+
+/* ---------- toolbar ---------- */
+.bar { position: sticky; top: 0; z-index: 20; background: var(--paper); border-bottom: 1.5px solid var(--ink); box-shadow: 0 6px 18px -14px rgba(34, 48, 30, 0.6); }
+.bar .wrap { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 18px; align-items: center; padding-top: 12px; padding-bottom: 12px; }
+.tabs { display: flex; gap: 6px; }
+.tab { min-height: 42px; padding: 8px 14px; border: 1.5px solid var(--ink); background: transparent; cursor: pointer; font-size: 15.5px; white-space: nowrap; }
+.tab:hover { background: var(--oat); }
+.tab[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.search { position: relative; }
+.search input { width: 100%; min-height: 44px; padding: 10px 14px 10px 40px; font: 16px var(--body); color: var(--ink); background: var(--oat); border: 1.5px solid var(--ink); }
+.search svg { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); }
+.listbtn { display: inline-flex; align-items: center; gap: 10px; min-height: 46px; padding: 8px 18px; background: var(--beet); color: var(--paper); border: 2px solid var(--beet); cursor: pointer; font-weight: 700; font-size: 16px; white-space: nowrap; }
+.listbtn:hover { background: var(--ink); border-color: var(--ink); }
+.badge { display: inline-grid; place-items: center; min-width: 28px; height: 28px; padding: 0 7px; background: var(--paper); color: var(--beet); font-family: var(--display); font-size: 15px; border-radius: 14px; }
+@media (max-width: 860px) {
+  .bar .wrap { grid-template-columns: minmax(0, 1fr) auto; gap: 10px; padding-top: 10px; padding-bottom: 10px; }
+  .tabs { grid-column: 1 / -1; order: 3; overflow-x: auto; padding-bottom: 2px; }
+  .tab { flex: none; min-height: 38px; padding: 6px 12px; font-size: 15px; }
+  .listbtn .wide { display: none; }
+}
+
+/* ---------- catalog ---------- */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 26px 0 0; }
+.chip { display: inline-block; padding: 5px 12px; border: 1px solid var(--moss); border-radius: 999px; color: var(--moss); text-decoration: none; font-size: 14.5px; background: transparent; }
+.chip:hover { background: var(--moss); color: var(--paper); }
+.chip[hidden] { display: none; }
+@media (max-width: 560px) { .chips { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 6px; } .chip { flex: none; } }
+.sec { padding-top: 44px; scroll-margin-top: 92px; }
+.sec[hidden] { display: none; }
+.sec-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 10px 24px; padding-bottom: 12px; margin-bottom: 22px; border-bottom: 1px solid var(--ink); position: relative; }
+.sec-head::after { content: ""; position: absolute; left: 0; right: 0; bottom: -5px; border-bottom: 1px solid var(--sage); }
+.sec-head h2 { margin: 0; font-family: var(--display); font-weight: 400; color: var(--beet); font-size: clamp(28px, 4vw, 38px); line-height: 1.05; text-wrap: balance; }
+.count { margin: 4px 0 0; font-style: italic; color: var(--moss); font-size: 15px; }
+.fchoice { display: inline-flex; align-items: center; gap: 10px; min-height: 42px; padding: 6px 14px; border: 1.5px dashed var(--moss); background: transparent; font-style: italic; color: var(--moss); cursor: pointer; font-size: 15.5px; }
+.fchoice:hover { border-style: solid; }
+.fchoice[aria-pressed="true"] { border: 1.5px solid var(--beet); color: var(--beet); background: var(--paper); }
+.box { flex: none; width: 18px; height: 18px; border: 1.5px solid currentColor; background: var(--paper); display: inline-grid; place-items: center; }
+[aria-pressed="true"] > .box { background: var(--beet); border-color: var(--beet); }
+[aria-pressed="true"] > .box::after { content: ""; width: 5px; height: 10px; border: solid var(--paper); border-width: 0 2px 2px 0; transform: translateY(-1px) rotate(45deg); }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 24px; }
+.card { position: relative; display: flex; flex-direction: column; background: var(--paper); border: 1.5px solid var(--ink); transition: box-shadow 0.15s ease, border-color 0.15s ease; }
+.card[hidden] { display: none; }
+.card:hover { box-shadow: 0 10px 24px -16px rgba(34, 48, 30, 0.7); }
+.card.on { border-color: var(--beet); box-shadow: 0 0 0 2px var(--beet); }
+.ph { position: relative; aspect-ratio: 4 / 3; background: #fff; border-bottom: 1.5px solid var(--ink); overflow: hidden; cursor: pointer; }
+.card.on .ph { border-bottom-color: var(--beet); }
+.ph img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.card:hover .ph img { transform: scale(1.03); }
+.ribbon { position: absolute; left: 0; top: 14px; padding: 4px 12px 4px 10px; background: var(--beet); color: var(--paper); font-size: 13px; font-weight: 700; letter-spacing: 0.02em; opacity: 0; transform: translateX(-8px); transition: opacity 0.15s ease, transform 0.15s ease; }
+.card.on .ribbon { opacity: 1; transform: none; }
+.info { flex: 1; padding: 14px 16px 12px; }
+.info h3 { margin: 0; font-size: 19px; line-height: 1.25; }
+.type { margin: 2px 0 0; font-style: italic; color: var(--beet); font-size: 15px; }
+.desc { margin: 8px 0 0; font-size: 15.5px; line-height: 1.5; }
+.add { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 48px; padding: 10px 16px; border: 0; border-top: 1px solid var(--sage); background: transparent; cursor: pointer; font-size: 15.5px; font-weight: 700; text-align: left; }
+.add:hover { background: var(--oat); }
+.add[aria-pressed="true"] { background: var(--beet); color: var(--paper); border-top-color: var(--beet); }
+.add[aria-pressed="true"] > .box { background: var(--paper); border-color: var(--paper); }
+.add[aria-pressed="true"] > .box::after { border-color: var(--beet); }
+@media (max-width: 560px) {
+  .grid { grid-template-columns: 1fr; gap: 14px; }
+  .card { display: grid; grid-template-columns: 116px minmax(0, 1fr); }
+  .ph { grid-row: span 2; aspect-ratio: auto; min-height: 100%; border-bottom: 0; border-right: 1.5px solid var(--ink); }
+  .card.on .ph { border-right-color: var(--beet); }
+  .ribbon { top: 8px; font-size: 11.5px; padding: 2px 8px 2px 6px; }
+  .info { padding: 10px 12px 6px; }
+  .info h3 { font-size: 17.5px; }
+  .desc { font-size: 15px; margin-top: 4px; }
+  .add { min-height: 44px; padding: 8px 12px; font-size: 15px; }
+}
+.nores { padding: 48px 0 8px; font-style: italic; font-size: 18px; color: var(--moss); }
+.nores[hidden] { display: none; }
+
+/* ---------- footer ---------- */
+.foot { margin-top: 72px; background: var(--ink); color: var(--paper); }
+.foot .wrap { padding-top: 40px; padding-bottom: 40px; display: grid; gap: 18px; }
+.foot .co { margin: 0; font-family: var(--display); font-size: 26px; color: var(--kraft); }
+.foot a { color: var(--paper); }
+.foot p { margin: 0; }
+.foot .sprig line { stroke: var(--kraft); } .foot .sprig ellipse { fill: var(--kraft); }
+.credits { font-size: 13.5px; color: #D6D2C2; }
+.credits summary { cursor: pointer; font-style: italic; min-height: 32px; }
+.credits p { margin: 8px 0 0; }
+
+/* ---------- list drawer ---------- */
+.scrim { position: fixed; inset: 0; background: rgba(34, 48, 30, 0.5); z-index: 40; opacity: 0; pointer-events: none; transition: opacity 0.2s ease; }
+.drawer { position: fixed; top: 0; right: 0; bottom: 0; width: min(460px, 100%); z-index: 50; background: var(--oat); border-left: 3px double var(--ink); display: flex; flex-direction: column; transform: translateX(105%); transition: transform 0.25s ease; visibility: hidden; }
+body.open .scrim { opacity: 1; pointer-events: auto; }
+body.open .drawer { transform: none; visibility: visible; }
+body.open { overflow: hidden; }
+.d-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 20px 22px 16px; background: var(--kraft) var(--grain); border-bottom: 1.5px solid var(--ink); }
+.d-head h2 { margin: 0; font-family: var(--display); font-weight: 400; font-size: 28px; line-height: 1.05; color: var(--beet); }
+.d-head p { margin: 4px 0 0; font-style: italic; font-size: 15px; }
+.close { flex: none; width: 46px; height: 46px; border: 1.5px solid var(--ink); background: var(--paper); cursor: pointer; display: grid; place-items: center; }
+.d-body { flex: 1; overflow-y: auto; padding: 8px 22px 24px; }
+.empty { margin: 24px 0; font-style: italic; color: var(--moss); }
+.grp h3 { margin: 20px 0 8px; font-family: var(--display); font-weight: 400; font-size: 18px; color: var(--ink); }
+.grp ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.item { display: grid; grid-template-columns: 48px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 8px; background: var(--paper); border: 1px solid var(--sage); }
+.item img { width: 48px; height: 48px; object-fit: cover; border: 1px solid var(--ink); }
+.item .nm { font-weight: 700; font-size: 16px; line-height: 1.25; }
+.item .ty { font-style: italic; color: var(--beet); font-size: 14px; }
+.item .acts { display: flex; gap: 6px; align-items: center; }
+.extra { min-height: 36px; padding: 4px 10px; border: 1px solid var(--moss); background: transparent; color: var(--moss); font-size: 13.5px; cursor: pointer; white-space: nowrap; }
+.extra[aria-pressed="true"] { background: var(--moss); color: var(--paper); }
+.rm { width: 36px; height: 36px; border: 1px solid transparent; background: transparent; cursor: pointer; display: grid; place-items: center; color: var(--moss); }
+.rm:hover { border-color: var(--moss); }
+.fc-item { grid-template-columns: 48px minmax(0, 1fr) auto; }
+.fc-mark { width: 48px; height: 48px; display: grid; place-items: center; border: 1px dashed var(--moss); color: var(--moss); font-family: var(--display); font-size: 18px; }
+.fields { display: grid; gap: 14px; margin-top: 26px; padding-top: 18px; border-top: 1px solid var(--ink); }
+.fields label { display: grid; gap: 6px; font-weight: 700; font-size: 15.5px; }
+.fields input, .fields textarea { font: 16px/1.45 var(--body); color: var(--ink); background: var(--paper); border: 1.5px solid var(--ink); padding: 10px 12px; width: 100%; }
+.fields textarea { min-height: 96px; resize: vertical; }
+.fallback { margin-top: 18px; font-size: 14.5px; }
+.fallback summary { cursor: pointer; font-style: italic; color: var(--moss); min-height: 30px; }
+.fallback textarea { width: 100%; min-height: 150px; margin-top: 8px; font: 14px/1.45 var(--body); background: var(--paper); color: var(--ink); border: 1px solid var(--sage); padding: 8px 10px; }
+.clear { margin-top: 16px; border: 0; background: none; padding: 6px 0; color: var(--moss); font-style: italic; text-decoration: underline; cursor: pointer; font-size: 15px; min-height: 36px; }
+.d-foot { padding: 16px 22px 18px; border-top: 1.5px solid var(--ink); background: var(--paper); display: grid; gap: 10px; }
+.d-foot .row { display: grid; grid-template-columns: 1fr auto; gap: 10px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 50px; padding: 10px 18px; font-weight: 700; font-size: 16px; border: 2px solid var(--ink); background: var(--paper); color: var(--ink); cursor: pointer; text-decoration: none; text-align: center; }
+.btn.primary { background: var(--beet); border-color: var(--beet); color: var(--paper); }
+.btn.primary:hover { background: var(--ink); border-color: var(--ink); }
+.btn:not(.primary):hover { background: var(--oat); }
+.btn[aria-disabled="true"] { opacity: 0.45; pointer-events: none; }
+.note { margin: 0; font-size: 14px; color: var(--moss); line-height: 1.45; }
+.status { margin: 0; min-height: 1.4em; font-size: 14.5px; font-style: italic; color: var(--beet); }
+
+/* ---------- toast ---------- */
+.toast { position: fixed; left: 50%; bottom: 22px; transform: translate(-50%, 20px); background: var(--ink); color: var(--paper); padding: 10px 18px; font-size: 15px; border: 1px solid var(--kraft); opacity: 0; pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease; z-index: 60; max-width: calc(100% - 32px); }
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; }
+  html { scroll-behavior: auto; }
+}
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+</head>
+<body>
+<header class="hero">
+<div class="wrap">
+<div>
+<p class="co">Feroleto Garden Co.</p>
+<svg class="sprig" width="200" height="24" viewBox="0 0 220 26" aria-hidden="true"><line x1="0" y1="13" x2="80" y2="13"></line><line x1="140" y1="13" x2="220" y2="13"></line><ellipse cx="68" cy="8.5" rx="8" ry="2.8" transform="rotate(-22 68 8.5)"></ellipse><ellipse cx="86" cy="17.5" rx="8" ry="2.8" transform="rotate(22 86 17.5)"></ellipse><ellipse cx="152" cy="8.5" rx="8" ry="2.8" transform="rotate(22 152 8.5)"></ellipse><ellipse cx="134" cy="17.5" rx="8" ry="2.8" transform="rotate(-22 134 17.5)"></ellipse><path class="seed" d="M110 4 C117 8 117 18 110 22 C103 18 103 8 110 4 Z"></path></svg>
+<h1>2027 <span>Garden Catalog</span></h1>
+<p class="lede">Everything I am growing for the 2027 season: 142 varieties of vegetables, herbs, fruit and flowers. Choose what you would like in your garden and I will plan your beds around it.</p>
+<ol class="steps">
+<li><b>1</b>Browse the catalog by section, or search for a favorite.</li>
+<li><b>2</b>Tap Add to my garden on anything you want.</li>
+<li><b>3</b>Open your list and send it to Frank.</li>
+</ol>
+<a class="cta" href="#catalog">Start browsing</a>
+</div>
+<div class="mosaic"><img src="img/005.webp" alt="Speckled Roman tomatoes" class="m0"><img src="img/132.webp" alt="Café au Lait dahlias" class="m1"><img src="img/055.webp" alt="Bright Lights rainbow chard" class="m2"><img src="img/039.webp" alt="Musquée de Provence pumpkins" class="m3"></div>
+</div>
+</header>
+
+<div class="bar" id="catalog">
+<div class="wrap">
+<div class="tabs" role="group" aria-label="Show">
+<button class="tab" type="button" data-cat="all" aria-pressed="true">Everything</button>
+<button class="tab" type="button" data-cat="veg" aria-pressed="false">Vegetables</button>
+<button class="tab" type="button" data-cat="fruit" aria-pressed="false">Fruit</button>
+<button class="tab" type="button" data-cat="herbs" aria-pressed="false">Herbs</button>
+<button class="tab" type="button" data-cat="flowers" aria-pressed="false">Flowers</button>
+</div>
+<div class="search">
+<label class="sr" for="q">Search varieties</label>
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg>
+<input id="q" type="search" placeholder="Search, like cherry, basil or dahlia" autocomplete="off">
+</div>
+<button class="listbtn" id="open-list" type="button" aria-haspopup="dialog"><span class="wide">My garden list</span><span class="sr">My garden list,</span><span class="badge" id="badge">0</span><span class="sr">picked</span></button>
+</div>
+</div>
+
+<main class="wrap">
+<nav class="chips" aria-label="Jump to a section"><a class="chip" href="#tomatoes" data-cat="veg">Tomatoes</a><a class="chip" href="#peppers" data-cat="veg">Peppers</a><a class="chip" href="#eggplant" data-cat="veg">Eggplant</a><a class="chip" href="#cucumbers" data-cat="veg">Cucumbers</a><a class="chip" href="#summer-squash" data-cat="veg">Summer squash</a><a class="chip" href="#winter-squash-and-pumpkins" data-cat="veg">Winter squash and pumpkins</a><a class="chip" href="#melons" data-cat="fruit">Melons</a><a class="chip" href="#potatoes" data-cat="veg">Potatoes</a><a class="chip" href="#lettuce" data-cat="veg">Lettuce</a><a class="chip" href="#salad-greens-and-chicories" data-cat="veg">Salad greens and chicories</a><a class="chip" href="#brassicas-and-leafy-greens" data-cat="veg">Brassicas and leafy greens</a><a class="chip" href="#beans-and-peas" data-cat="veg">Beans and peas</a><a class="chip" href="#carrots" data-cat="veg">Carrots</a><a class="chip" href="#beets-and-roots" data-cat="veg">Beets and roots</a><a class="chip" href="#radishes-turnips-and-kohlrabi" data-cat="veg">Radishes, turnips and kohlrabi</a><a class="chip" href="#onions-and-garlic" data-cat="veg">Onions and garlic</a><a class="chip" href="#specialty-vegetables" data-cat="veg">Specialty vegetables</a><a class="chip" href="#strawberries" data-cat="fruit">Strawberries</a><a class="chip" href="#herbs" data-cat="herbs">Herbs</a><a class="chip" href="#cut-flowers" data-cat="flowers">Cut flowers</a><a class="chip" href="#dahlias" data-cat="flowers">Dahlias</a></nav>
+<p class="nores" id="nores" hidden></p>
+<section class="sec" id="tomatoes" data-cat="veg" aria-labelledby="tomatoes-h">
+<header class="sec-head">
+<div><h2 id="tomatoes-h">Tomatoes</h2><p class="count">12 varieties</p></div>
+<button class="fchoice" type="button" aria-pressed="false" data-sec="Tomatoes"><span class="box" aria-hidden="true"></span>Let Frank choose for me</button>
+</header>
+<div class="grid">
+<article class="card" id="v000" data-sec="Tomatoes" data-name="Big Beef" data-type="Red beefsteak" data-img="img/000.webp" data-q="big beef red beefsteak big, ribbed red beefsteak with full, balanced tomato flavor and soft flesh. tomatoes">
+<div class="ph" data-toggle><img src="img/000.webp" alt="Big Beef, red beefsteak" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Big Beef</h3><p class="type">Red beefsteak</p><p class="desc">Big, ribbed red beefsteak with full, balanced tomato flavor and soft flesh.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Big Beef to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v001" data-sec="Tomatoes" data-name="Kellogg&#x27;s Breakfast" data-type="Yellow-orange beefsteak" data-img="img/001.webp" data-q="kellogg&#x27;s breakfast yellow-orange beefsteak huge deep-orange heirloom beefsteak, sweet with a balanced, true tomato flavor. tomatoes">
+<div class="ph" data-toggle><img src="img/001.webp" alt="Kellogg&#x27;s Breakfast, yellow-orange beefsteak" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Kellogg&#x27;s Breakfast</h3><p class="type">Yellow-orange beefsteak</p><p class="desc">Huge deep-orange heirloom beefsteak, sweet with a balanced, true tomato flavor.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Kellogg&#x27;s Breakfast to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v002" data-sec="Tomatoes" data-name="Cherokee Purple" data-type="Dark beefsteak" data-img="img/002.webp" data-q="cherokee purple dark beefsteak dusky rose-brown beefsteak with green shoulders and rich, sweet, smoky flavor. tomatoes">
+<div class="ph" data-toggle><img src="img/002.webp" alt="Cherokee Purple, dark beefsteak" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Cherokee Purple</h3><p class="type">Dark beefsteak</p><p class="desc">Dusky rose-brown beefsteak with green shoulders and rich, sweet, smoky flavor.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Cherokee Purple to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v003" data-sec="Tomatoes" data-name="Brandywine" data-type="Pink beefsteak" data-img="img/003.webp" data-q="brandywine pink beefsteak the classic pink heirloom, often over a pound, with deep, old-fashioned tomato flavor. tomatoes">
+<div class="ph" data-toggle><img src="img/003.webp" alt="Brandywine, pink beefsteak" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Brandywine</h3><p class="type">Pink beefsteak</p><p class="desc">The classic pink heirloom, often over a pound, with deep, old-fashioned tomato flavor.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Brandywine to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v004" data-sec="Tomatoes" data-name="San Marzano" data-type="Paste" data-img="img/004.webp" data-q="san marzano paste the italian plum tomato for sauce, dry and meaty with few seeds. tomatoes">
+<div class="ph" data-toggle><img src="img/004.webp" alt="San Marzano, paste" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>San Marzano</h3><p class="type">Paste</p><p class="desc">The Italian plum tomato for sauce, dry and meaty with few seeds.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add San Marzano to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v005" data-sec="Tomatoes" data-name="Speckled Roman" data-type="Striped paste" data-img="img/005.webp" data-q="speckled roman striped paste a meaty paste tomato streaked red and gold, with a bright, tangy flavor. tomatoes">
+<div class="ph" data-toggle><img src="img/005.webp" alt="Speckled Roman, striped paste" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Speckled Roman</h3><p class="type">Striped paste</p><p class="desc">A meaty paste tomato streaked red and gold, with a bright, tangy flavor.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Speckled Roman to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v006" data-sec="Tomatoes" data-name="Favorita" data-type="Red cherry" data-img="img/006.webp" data-q="favorita red cherry deep red cherry, very sweet, with a fruity, floral note. tomatoes">
+<div class="ph" data-toggle><img src="img/006.webp" alt="Favorita, red cherry" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Favorita</h3><p class="type">Red cherry</p><p class="desc">Deep red cherry, very sweet, with a fruity, floral note.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Favorita to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v007" data-sec="Tomatoes" data-name="Sungold" data-type="Orange cherry" data-img="img/007.webp" data-q="sungold orange cherry orange cherry with candy-like sweetness and a tropical, fruity depth. tomatoes">
+<div class="ph" data-toggle><img src="img/007.webp" alt="Sungold, orange cherry" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Sungold</h3><p class="type">Orange cherry</p><p class="desc">Orange cherry with candy-like sweetness and a tropical, fruity depth.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Sungold to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v008" data-sec="Tomatoes" data-name="Five Star Grape" data-type="Grape" data-img="img/008.webp" data-q="five star grape grape firm red grape tomato with real tomato flavor beneath the sweetness. tomatoes">
+<div class="ph" data-toggle><img src="img/008.webp" alt="Five Star Grape, grape" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Five Star Grape</h3><p class="type">Grape</p><p class="desc">Firm red grape tomato with real tomato flavor beneath the sweetness.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Five Star Grape to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v009" data-sec="Tomatoes" data-name="Sunrise Bumble Bee" data-type="Striped cherry" data-img="img/009.webp" data-q="sunrise bumble bee striped cherry golden cherry streaked with red inside and out, sweet and mild. tomatoes">
+<div class="ph" data-toggle><img src="img/009.webp" alt="Sunrise Bumble Bee, striped cherry" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Sunrise Bumble Bee</h3><p class="type">Striped cherry</p><p class="desc">Golden cherry streaked with red inside and out, sweet and mild.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Sunrise Bumble Bee to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v010" data-sec="Tomatoes" data-name="Blush" data-type="Elongated striped cherry" data-img="img/010.webp" data-q="blush elongated striped cherry elongated yellow cherry with a pink blush, sweet-tart and striking. tomatoes">
+<div class="ph" data-toggle><img src="img/010.webp" alt="Blush, elongated striped cherry" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Blush</h3><p class="type">Elongated striped cherry</p><p class="desc">Elongated yellow cherry with a pink blush, sweet-tart and striking.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Blush to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v011" data-sec="Tomatoes" data-name="Green Zebra" data-type="Green slicer" data-img="img/011.webp" data-q="green zebra green slicer a green-striped slicer that stays green when ripe, bright and tangy. tomatoes">
+<div class="ph" data-toggle><img src="img/011.webp" alt="Green Zebra, green slicer" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Green Zebra</h3><p class="type">Green slicer</p><p class="desc">A green-striped slicer that stays green when ripe, bright and tangy.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Green Zebra to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article>
+</div>
+</section><section class="sec" id="peppers" data-cat="veg" aria-labelledby="peppers-h">
+<header class="sec-head">
+<div><h2 id="peppers-h">Peppers</h2><p class="count">8 varieties</p></div>
+<button class="fchoice" type="button" aria-pressed="false" data-sec="Peppers"><span class="box" aria-hidden="true"></span>Let Frank choose for me</button>
+</header>
+<div class="grid">
+<article class="card" id="v012" data-sec="Peppers" data-name="Revolution" data-type="Red bell" data-img="img/012.webp" data-q="revolution red bell big, blocky, thick-walled bell that ripens from green to a sweet, deep red. peppers">
+<div class="ph" data-toggle><img src="img/012.webp" alt="Revolution, red bell" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Revolution</h3><p class="type">Red bell</p><p class="desc">Big, blocky, thick-walled bell that ripens from green to a sweet, deep red.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Revolution to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v013" data-sec="Peppers" data-name="Early Sunsation" data-type="Yellow bell" data-img="img/013.webp" data-q="early sunsation yellow bell extra-large, bright yellow bell with sweet, crisp walls. peppers">
+<div class="ph" data-toggle><img src="img/013.webp" alt="Early Sunsation, yellow bell" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Early Sunsation</h3><p class="type">Yellow bell</p><p class="desc">Extra-large, bright yellow bell with sweet, crisp walls.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Early Sunsation to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v014" data-sec="Peppers" data-name="Gilboa" data-type="Orange bell" data-img="img/014.webp" data-q="gilboa orange bell bright orange bell with sweet, fruity flesh, borne heavily on vigorous plants. peppers">
+<div class="ph" data-toggle><img src="img/014.webp" alt="Gilboa, orange bell" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Gilboa</h3><p class="type">Orange bell</p><p class="desc">Bright orange bell with sweet, fruity flesh, borne heavily on vigorous plants.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Gilboa to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v015" data-sec="Peppers" data-name="Early Jalapeño" data-type="Jalapeño" data-img="img/015.webp" data-q="early jalapeño jalapeño classic jalapeño heat and flavor, ready earlier in the summer. peppers">
+<div class="ph" data-toggle><img src="img/015.webp" alt="Early Jalapeño, jalapeño" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Early Jalapeño</h3><p class="type">Jalapeño</p><p class="desc">Classic jalapeño heat and flavor, ready earlier in the summer.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Early Jalapeño to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v016" data-sec="Peppers" data-name="Habanero" data-type="Habanero" data-img="img/016.webp" data-q="habanero habanero fruity and floral under serious heat; a plant or two goes a long way. peppers">
+<div class="ph" data-toggle><img src="img/016.webp" alt="Habanero, habanero" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Habanero</h3><p class="type">Habanero</p><p class="desc">Fruity and floral under serious heat; a plant or two goes a long way.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Habanero to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v017" data-sec="Peppers" data-name="Habanada" data-type="Heatless habanero" data-img="img/017.webp" data-q="habanada heatless habanero all of the habanero&#x27;s floral, tropical fruitiness with none of the heat. peppers">
+<div class="ph" data-toggle><img src="img/017.webp" alt="Habanada, heatless habanero" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Habanada</h3><p class="type">Heatless habanero</p><p class="desc">All of the habanero&#x27;s floral, tropical fruitiness with none of the heat.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Habanada to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v018" data-sec="Peppers" data-name="Red Ember" data-type="Cayenne" data-img="img/018.webp" data-q="red ember cayenne a slender red cayenne with warm, full flavor behind the heat, for cooking, drying and hot sauce. peppers">
+<div class="ph" data-toggle><img src="img/018.webp" alt="Red Ember, cayenne" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Red Ember</h3><p class="type">Cayenne</p><p class="desc">A slender red cayenne with warm, full flavor behind the heat, for cooking, drying and hot sauce.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Red Ember to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v019" data-sec="Peppers" data-name="Lunchbox mix" data-type="Snacking peppers" data-img="img/019.webp" data-q="lunchbox mix snacking peppers mini sweet peppers in red, orange and yellow, crunchy and sweet enough to eat like fruit. peppers">
+<div class="ph" data-toggle><img src="img/019.webp" alt="Lunchbox mix, snacking peppers" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Lunchbox mix</h3><p class="type">Snacking peppers</p><p class="desc">Mini sweet peppers in red, orange and yellow, crunchy and sweet enough to eat like fruit.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Lunchbox mix to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article>
+</div>
+</section><section class="sec" id="eggplant" data-cat="veg" aria-labelledby="eggplant-h">
+<header class="sec-head">
+<div><h2 id="eggplant-h">Eggplant</h2><p class="count">2 varieties</p></div>
+<button class="fchoice" type="button" aria-pressed="false" data-sec="Eggplant"><span class="box" aria-hidden="true"></span>Let Frank choose for me</button>
+</header>
+<div class="grid">
+<article class="card" id="v020" data-sec="Eggplant" data-name="Orient Express" data-type="Asian eggplant" data-img="img/020.webp" data-q="orient express asian eggplant long, glossy, dark-purple fruit with tender skin and mild, creamy flesh. eggplant">
+<div class="ph" data-toggle><img src="img/020.webp" alt="Orient Express, asian eggplant" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Orient Express</h3><p class="type">Asian eggplant</p><p class="desc">Long, glossy, dark-purple fruit with tender skin and mild, creamy flesh.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Orient Express to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v021" data-sec="Eggplant" data-name="Traviata" data-type="Italian eggplant" data-img="img/021.webp" data-q="traviata italian eggplant the classic glossy black, bell-shaped italian eggplant with firm, creamy flesh. eggplant">
+<div class="ph" data-toggle><img src="img/021.webp" alt="Traviata, italian eggplant" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Traviata</h3><p class="type">Italian eggplant</p><p class="desc">The classic glossy black, bell-shaped Italian eggplant with firm, creamy flesh.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Traviata to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article>
+</div>
+</section><section class="sec" id="cucumbers" data-cat="veg" aria-labelledby="cucumbers-h">
+<header class="sec-head">
+<div><h2 id="cucumbers-h">Cucumbers</h2><p class="count">5 varieties</p></div>
+<button class="fchoice" type="button" aria-pressed="false" data-sec="Cucumbers"><span class="box" aria-hidden="true"></span>Let Frank choose for me</button>
+</header>
+<div class="grid">
+<article class="card" id="v022" data-sec="Cucumbers" data-name="Marketmore 76" data-type="Slicing cucumber" data-img="img/022.webp" data-q="marketmore 76 slicing cucumber a dependable dark-green slicer, crisp, cool and mild. cucumbers">
+<div class="ph" data-toggle><img src="img/022.webp" alt="Marketmore 76, slicing cucumber" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Marketmore 76</h3><p class="type">Slicing cucumber</p><p class="desc">A dependable dark-green slicer, crisp, cool and mild.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Marketmore 76 to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v023" data-sec="Cucumbers" data-name="Calypso" data-type="Pickling cucumber" data-img="img/023.webp" data-q="calypso pickling cucumber short, blocky pickler that stays firm and crunchy in the brine. cucumbers">
+<div class="ph" data-toggle><img src="img/023.webp" alt="Calypso, pickling cucumber" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Calypso</h3><p class="type">Pickling cucumber</p><p class="desc">Short, blocky pickler that stays firm and crunchy in the brine.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Calypso to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v025" data-sec="Cucumbers" data-name="County Fair" data-type="Pickling cucumber" data-img="img/025.webp" data-q="county fair pickling cucumber crisp, small-seeded pickler that is just as good sliced fresh. cucumbers">
+<div class="ph" data-toggle><img src="img/025.webp" alt="County Fair, pickling cucumber" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>County Fair</h3><p class="type">Pickling cucumber</p><p class="desc">Crisp, small-seeded pickler that is just as good sliced fresh.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add County Fair to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v024" data-sec="Cucumbers" data-name="Green Fingers" data-type="Persian cucumber" data-img="img/024.webp" data-q="green fingers persian cucumber thin-skinned baby cucumber, crisp and sweet for eating out of hand. cucumbers">
+<div class="ph" data-toggle><img src="img/024.webp" alt="Green Fingers, persian cucumber" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Green Fingers</h3><p class="type">Persian cucumber</p><p class="desc">Thin-skinned baby cucumber, crisp and sweet for eating out of hand.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Green Fingers to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v026" data-sec="Cucumbers" data-name="Qwerty" data-type="Cocktail cucumber" data-img="img/026.webp" data-q="qwerty cocktail cucumber seedless, thin-skinned little cucumber, crisp and tidy for snacking and lunchboxes. cucumbers">
+<div class="ph" data-toggle><img src="img/026.webp" alt="Qwerty, cocktail cucumber" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Qwerty</h3><p class="type">Cocktail cucumber</p><p class="desc">Seedless, thin-skinned little cucumber, crisp and tidy for snacking and lunchboxes.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Qwerty to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article>
+</div>
+</section><section class="sec" id="summer-squash" data-cat="veg" aria-labelledby="summer-squash-h">
+<header class="sec-head">
+<div><h2 id="summer-squash-h">Summer squash</h2><p class="count">3 varieties</p></div>
+<button class="fchoice" type="button" aria-pressed="false" data-sec="Summer squash"><span class="box" aria-hidden="true"></span>Let Frank choose for me</button>
+</header>
+<div class="grid">
+<article class="card" id="v027" data-sec="Summer squash" data-name="Costata Romanesco" data-type="Ribbed zucchini" data-img="img/027.webp" data-q="costata romanesco ribbed zucchini italian heirloom zucchini with firm, nutty flesh that stays good even when picked large. summer squash">
+<div class="ph" data-toggle><img src="img/027.webp" alt="Costata Romanesco, ribbed zucchini" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Costata Romanesco</h3><p class="type">Ribbed zucchini</p><p class="desc">Italian heirloom zucchini with firm, nutty flesh that stays good even when picked large.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Costata Romanesco to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v028" data-sec="Summer squash" data-name="Zephyr" data-type="Yellow summer squash" data-img="img/028.webp" data-q="zephyr yellow summer squash yellow squash with a pale-green tip and a nutty bite, best picked small. summer squash">
+<div class="ph" data-toggle><img src="img/028.webp" alt="Zephyr, yellow summer squash" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Zephyr</h3><p class="type">Yellow summer squash</p><p class="desc">Yellow squash with a pale-green tip and a nutty bite, best picked small.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Zephyr to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v029" data-sec="Summer squash" data-name="Dunja" data-type="Green zucchini" data-img="img/029.webp" data-q="dunja green zucchini glossy, dark-green zucchini with tender, mild flesh all season long. summer squash">
+<div class="ph" data-toggle><img src="img/029.webp" alt="Dunja, green zucchini" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Dunja</h3><p class="type">Green zucchini</p><p class="desc">Glossy, dark-green zucchini with tender, mild flesh all season long.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Dunja to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article>
+</div>
+</section><section class="sec" id="winter-squash-and-pumpkins" data-cat="veg" aria-labelledby="winter-squash-and-pumpkins-h">
+<header class="sec-head">
+<div><h2 id="winter-squash-and-pumpkins-h">Winter squash and pumpkins</h2><p class="count">11 varieties</p></div>
+<button class="fchoice" type="button" aria-pressed="false" data-sec="Winter squash and pumpkins"><span class="box" aria-hidden="true"></span>Let Frank choose for me</button>
+</header>
+<div class="grid">
+<article class="card" id="v030" data-sec="Winter squash and pumpkins" data-name="Waltham Butternut" data-type="Butternut" data-img="img/030.webp" data-q="waltham butternut butternut the classic butternut, sweet and smooth-textured, that keeps for months. winter squash and pumpkins">
+<div class="ph" data-toggle><img src="img/030.webp" alt="Waltham Butternut, butternut" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Waltham Butternut</h3><p class="type">Butternut</p><p class="desc">The classic butternut, sweet and smooth-textured, that keeps for months.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Waltham Butternut to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v031" data-sec="Winter squash and pumpkins" data-name="Honeynut" data-type="Mini butternut" data-img="img/031.webp" data-q="honeynut mini butternut a small butternut with deep-orange flesh and concentrated, honeyed sweetness. winter squash and pumpkins">
+<div class="ph" data-toggle><img src="img/031.webp" alt="Honeynut, mini butternut" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Honeynut</h3><p class="type">Mini butternut</p><p class="desc">A small butternut with deep-orange flesh and concentrated, honeyed sweetness.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Honeynut to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v032" data-sec="Winter squash and pumpkins" data-name="Sweet Mama" data-type="Kabocha" data-img="img/032.webp" data-q="sweet mama kabocha green kabocha with dense, dry flesh that roasts up chestnut-sweet. winter squash and pumpkins">
+<div class="ph" data-toggle><img src="img/032.webp" alt="Sweet Mama, kabocha" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Sweet Mama</h3><p class="type">Kabocha</p><p class="desc">Green kabocha with dense, dry flesh that roasts up chestnut-sweet.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Sweet Mama to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v033" data-sec="Winter squash and pumpkins" data-name="Delicata" data-type="Delicata" data-img="img/033.webp" data-q="delicata delicata striped oblong squash with sweet, nutty flesh and a skin tender enough to eat. winter squash and pumpkins">
+<div class="ph" data-toggle><img src="img/033.webp" alt="Delicata, delicata" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Delicata</h3><p class="type">Delicata</p><p class="desc">Striped oblong squash with sweet, nutty flesh and a skin tender enough to eat.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Delicata to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v034" data-sec="Winter squash and pumpkins" data-name="Sweet Dumpling" data-type="Dumpling squash" data-img="img/034.webp" data-q="sweet dumpling dumpling squash single-serving striped squash with sweet, tender flesh, handsome on the fall table. winter squash and pumpkins">
+<div class="ph" data-toggle><img src="img/034.webp" alt="Sweet Dumpling, dumpling squash" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Sweet Dumpling</h3><p class="type">Dumpling squash</p><p class="desc">Single-serving striped squash with sweet, tender flesh, handsome on the fall table.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Sweet Dumpling to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v035" data-sec="Winter squash and pumpkins" data-name="Table Ace" data-type="Acorn" data-img="img/035.webp" data-q="table ace acorn dark-green acorn squash with sweet, nutty, fine-grained flesh. winter squash and pumpkins">
+<div class="ph" data-toggle><img src="img/035.webp" alt="Table Ace, acorn" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Table Ace</h3><p class="type">Acorn</p><p class="desc">Dark-green acorn squash with sweet, nutty, fine-grained flesh.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Table Ace to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v036" data-sec="Winter squash and pumpkins" data-name="Howden" data-type="Carving pumpkin" data-img="img/036.webp" data-q="howden carving pumpkin the classic jack-o&#x27;-lantern: big, round and deep orange. winter squash and pumpkins">
+<div class="ph" data-toggle><img src="img/036.webp" alt="Howden, carving pumpkin" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Howden</h3><p class="type">Carving pumpkin</p><p class="desc">The classic jack-o&#x27;-lantern: big, round and deep orange.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Howden to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v037" data-sec="Winter squash and pumpkins" data-name="Winter Luxury" data-type="Pie pumpkin" data-img="img/037.webp" data-q="winter luxury pie pumpkin heirloom pie pumpkin with a lacy, netted rind and silky, sweet flesh. winter squash and pumpkins">
+<div class="ph" data-toggle><img src="img/037.webp" alt="Winter Luxury, pie pumpkin" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Winter Luxury</h3><p class="type">Pie pumpkin</p><p class="desc">Heirloom pie pumpkin with a lacy, netted rind and silky, sweet flesh.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Winter Luxury to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v038" data-sec="Winter squash and pumpkins" data-name="Jack Be Little" data-type="Mini pumpkin" data-img="img/038.webp" data-q="jack be little mini pumpkin palm-size orange pumpkins for tabletops, mantels and windowsills. winter squash and pumpkins">
+<div class="ph" data-toggle><img src="img/038.webp" alt="Jack Be Little, mini pumpkin" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Jack Be Little</h3><p class="type">Mini pumpkin</p><p class="desc">Palm-size orange pumpkins for tabletops, mantels and windowsills.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Jack Be Little to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v039" data-sec="Winter squash and pumpkins" data-name="Musquée de Provence" data-type="French cheese pumpkin" data-img="img/039.webp" data-q="musquée de provence french cheese pumpkin deeply ribbed pumpkin that ripens from green to copper, with sweet, deep-orange flesh. winter squash and pumpkins">
+<div class="ph" data-toggle><img src="img/039.webp" alt="Musquée de Provence, french cheese pumpkin" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Musquée de Provence</h3><p class="type">French cheese pumpkin</p><p class="desc">Deeply ribbed pumpkin that ripens from green to copper, with sweet, deep-orange flesh.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Musquée de Provence to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v040" data-sec="Winter squash and pumpkins" data-name="Galeux d&#x27;Eysines" data-type="French heirloom pumpkin" data-img="img/040.webp" data-q="galeux d&#x27;eysines french heirloom pumpkin salmon-pink pumpkin crusted with peanut-like warts, with sweet, moist flesh for soup and pie. winter squash and pumpkins">
+<div class="ph" data-toggle><img src="img/040.webp" alt="Galeux d&#x27;Eysines, french heirloom pumpkin" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Galeux d&#x27;Eysines</h3><p class="type">French heirloom pumpkin</p><p class="desc">Salmon-pink pumpkin crusted with peanut-like warts, with sweet, moist flesh for soup and pie.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Galeux d&#x27;Eysines to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article>
+</div>
+</section><section class="sec" id="melons" data-cat="fruit" aria-labelledby="melons-h">
+<header class="sec-head">
+<div><h2 id="melons-h">Melons</h2><p class="count">2 varieties</p></div>
+<button class="fchoice" type="button" aria-pressed="false" data-sec="Melons"><span class="box" aria-hidden="true"></span>Let Frank choose for me</button>
+</header>
+<div class="grid">
+<article class="card" id="v041" data-sec="Melons" data-name="Petit Gris de Rennes" data-type="French cantaloupe" data-img="img/041.webp" data-q="petit gris de rennes french cantaloupe small breton heirloom with dense orange flesh and a honeyed, brown-sugar perfume. melons">
+<div class="ph" data-toggle><img src="img/041.webp" alt="Petit Gris de Rennes, french cantaloupe" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Petit Gris de Rennes</h3><p class="type">French cantaloupe</p><p class="desc">Small Breton heirloom with dense orange flesh and a honeyed, brown-sugar perfume.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Petit Gris de Rennes to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v042" data-sec="Melons" data-name="Sugar Baby" data-type="Icebox watermelon" data-img="img/042.webp" data-q="sugar baby icebox watermelon small, dark-rinded watermelon with crisp, sweet red flesh, sized to fit the fridge. melons">
+<div class="ph" data-toggle><img src="img/042.webp" alt="Sugar Baby, icebox watermelon" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Sugar Baby</h3><p class="type">Icebox watermelon</p><p class="desc">Small, dark-rinded watermelon with crisp, sweet red flesh, sized to fit the fridge.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Sugar Baby to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article>
+</div>
+</section><section class="sec" id="potatoes" data-cat="veg" aria-labelledby="potatoes-h">
+<header class="sec-head">
+<div><h2 id="potatoes-h">Potatoes</h2><p class="count">3 varieties</p></div>
+<button class="fchoice" type="button" aria-pressed="false" data-sec="Potatoes"><span class="box" aria-hidden="true"></span>Let Frank choose for me</button>
+</header>
+<div class="grid">
+<article class="card" id="v043" data-sec="Potatoes" data-name="Upstate Abundance" data-type="White potato" data-img="img/043.webp" data-q="upstate abundance white potato thin-skinned white creamer with rich flavor and no need to peel. potatoes">
+<div class="ph" data-toggle><img src="img/043.webp" alt="Upstate Abundance, white potato" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Upstate Abundance</h3><p class="type">White potato</p><p class="desc">Thin-skinned white creamer with rich flavor and no need to peel.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Upstate Abundance to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v044" data-sec="Potatoes" data-name="German Butterball" data-type="Yellow potato" data-img="img/044.webp" data-q="german butterball yellow potato golden potato with rich, buttery flesh, good any way you cook it. potatoes">
+<div class="ph" data-toggle><img src="img/044.webp" alt="German Butterball, yellow potato" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>German Butterball</h3><p class="type">Yellow potato</p><p class="desc">Golden potato with rich, buttery flesh, good any way you cook it.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add German Butterball to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v045" data-sec="Potatoes" data-name="Adirondack Blue" data-type="Purple potato" data-img="img/045.webp" data-q="adirondack blue purple potato purple skin and purple flesh that holds its color in the pot. potatoes">
+<div class="ph" data-toggle><img src="img/045.webp" alt="Adirondack Blue, purple potato" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Adirondack Blue</h3><p class="type">Purple potato</p><p class="desc">Purple skin and purple flesh that holds its color in the pot.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Adirondack Blue to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article>
+</div>
+</section><section class="sec" id="lettuce" data-cat="veg" aria-labelledby="lettuce-h">
+<header class="sec-head">
+<div><h2 id="lettuce-h">Lettuce</h2><p class="count">6 varieties</p></div>
+<button class="fchoice" type="button" aria-pressed="false" data-sec="Lettuce"><span class="box" aria-hidden="true"></span>Let Frank choose for me</button>
+</header>
+<div class="grid">
+<article class="card" id="v046" data-sec="Lettuce" data-name="New Red Fire" data-type="Red leaf" data-img="img/046.webp" data-q="new red fire red leaf large, ruffled heads of burgundy-edged leaves, tender and mild. lettuce">
+<div class="ph" data-toggle><img src="img/046.webp" alt="New Red Fire, red leaf" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>New Red Fire</h3><p class="type">Red leaf</p><p class="desc">Large, ruffled heads of burgundy-edged leaves, tender and mild.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add New Red Fire to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v047" data-sec="Lettuce" data-name="Green Forest" data-type="Romaine" data-img="img/047.webp" data-q="green forest romaine tall, dark-green romaine with crisp, sweet hearts for salads and grilling. lettuce">
+<div class="ph" data-toggle><img src="img/047.webp" alt="Green Forest, romaine" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Green Forest</h3><p class="type">Romaine</p><p class="desc">Tall, dark-green romaine with crisp, sweet hearts for salads and grilling.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Green Forest to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v048" data-sec="Lettuce" data-name="Starfighter" data-type="Green leaf" data-img="img/048.webp" data-q="starfighter green leaf big, bright-green heads of tender, sweet leaves that carry through summer. lettuce">
+<div class="ph" data-toggle><img src="img/048.webp" alt="Starfighter, green leaf" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Starfighter</h3><p class="type">Green leaf</p><p class="desc">Big, bright-green heads of tender, sweet leaves that carry through summer.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Starfighter to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v049" data-sec="Lettuce" data-name="Salanova" data-type="Salad mix" data-img="img/049.webp" data-q="salanova salad mix compact red and green heads that fall into bite-size, full-flavored leaves with one cut. lettuce">
+<div class="ph" data-toggle><img src="img/049.webp" alt="Salanova, salad mix" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Salanova</h3><p class="type">Salad mix</p><p class="desc">Compact red and green heads that fall into bite-size, full-flavored leaves with one cut.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Salanova to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v050" data-sec="Lettuce" data-name="Muir" data-type="Summer crisp" data-img="img/050.webp" data-q="muir summer crisp heat-tolerant batavian lettuce with crisp, sweet, juicy leaves. lettuce">
+<div class="ph" data-toggle><img src="img/050.webp" alt="Muir, summer crisp" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Muir</h3><p class="type">Summer crisp</p><p class="desc">Heat-tolerant Batavian lettuce with crisp, sweet, juicy leaves.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Muir to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v051" data-sec="Lettuce" data-name="Little Gem" data-type="Mini romaine" data-img="img/051.webp" data-q="little gem mini romaine compact romaine with dense, sweet hearts, perfect for salads or grilled halves. lettuce">
+<div class="ph" data-toggle><img src="img/051.webp" alt="Little Gem, mini romaine" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Little Gem</h3><p class="type">Mini romaine</p><p class="desc">Compact romaine with dense, sweet hearts, perfect for salads or grilled halves.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Little Gem to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article>
+</div>
+</section><section class="sec" id="salad-greens-and-chicories" data-cat="veg" aria-labelledby="salad-greens-and-chicories-h">
+<header class="sec-head">
+<div><h2 id="salad-greens-and-chicories-h">Salad greens and chicories</h2><p class="count">9 varieties</p></div>
+<button class="fchoice" type="button" aria-pressed="false" data-sec="Salad greens and chicories"><span class="box" aria-hidden="true"></span>Let Frank choose for me</button>
+</header>
+<div class="grid">
+<article class="card" id="v052" data-sec="Salad greens and chicories" data-name="Bloomsdale" data-type="Spinach" data-img="img/052.webp" data-q="bloomsdale spinach deeply crinkled, dark-green spinach with rich, sweet flavor. salad greens and chicories">
+<div class="ph" data-toggle><img src="img/052.webp" alt="Bloomsdale, spinach" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Bloomsdale</h3><p class="type">Spinach</p><p class="desc">Deeply crinkled, dark-green spinach with rich, sweet flavor.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Bloomsdale to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v053" data-sec="Salad greens and chicories" data-name="Kolibri" data-type="Spinach" data-img="img/053.webp" data-q="kolibri spinach smooth, tender, dark-green leaves, mild and good raw or wilted. salad greens and chicories">
+<div class="ph" data-toggle><img src="img/053.webp" alt="Kolibri, spinach" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Kolibri</h3><p class="type">Spinach</p><p class="desc">Smooth, tender, dark-green leaves, mild and good raw or wilted.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Kolibri to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v054" data-sec="Salad greens and chicories" data-name="Astro" data-type="Arugula" data-img="img/054.webp" data-q="astro arugula mild, tender arugula with a gentle peppery bite. salad greens and chicories">
+<div class="ph" data-toggle><img src="img/054.webp" alt="Astro, arugula" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Astro</h3><p class="type">Arugula</p><p class="desc">Mild, tender arugula with a gentle peppery bite.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Astro to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v055" data-sec="Salad greens and chicories" data-name="Bright Lights" data-type="Swiss chard" data-img="img/055.webp" data-q="bright lights swiss chard rainbow chard with stems of red, gold, pink, orange and white, mild and tender. salad greens and chicories">
+<div class="ph" data-toggle><img src="img/055.webp" alt="Bright Lights, swiss chard" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Bright Lights</h3><p class="type">Swiss chard</p><p class="desc">Rainbow chard with stems of red, gold, pink, orange and white, mild and tender.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Bright Lights to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v056" data-sec="Salad greens and chicories" data-name="Vit" data-type="Mâche" data-img="img/056.webp" data-q="vit mâche tender, glossy rosettes of corn salad with a mild, nutty flavor. salad greens and chicories">
+<div class="ph" data-toggle><img src="img/056.webp" alt="Vit, mâche" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Vit</h3><p class="type">Mâche</p><p class="desc">Tender, glossy rosettes of corn salad with a mild, nutty flavor.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Vit to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v057" data-sec="Salad greens and chicories" data-name="Diva" data-type="Escarole" data-img="img/057.webp" data-q="diva escarole full-hearted escarole with sweet, crisp inner leaves and a pleasant bitter edge. salad greens and chicories">
+<div class="ph" data-toggle><img src="img/057.webp" alt="Diva, escarole" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Diva</h3><p class="type">Escarole</p><p class="desc">Full-hearted escarole with sweet, crisp inner leaves and a pleasant bitter edge.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Diva to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v058" data-sec="Salad greens and chicories" data-name="Leonardo" data-type="Chioggia radicchio" data-img="img/058.webp" data-q="leonardo chioggia radicchio round, deep-red heads with white ribs and a crisp, bittersweet bite. salad greens and chicories">
+<div class="ph" data-toggle><img src="img/058.webp" alt="Leonardo, chioggia radicchio" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Leonardo</h3><p class="type">Chioggia radicchio</p><p class="desc">Round, deep-red heads with white ribs and a crisp, bittersweet bite.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Leonardo to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v059" data-sec="Salad greens and chicories" data-name="Bel Fiore" data-type="Variegated radicchio" data-img="img/059.webp" data-q="bel fiore variegated radicchio cream-colored heads splashed with rose, crisp and gently bitter. salad greens and chicories">
+<div class="ph" data-toggle><img src="img/059.webp" alt="Bel Fiore, variegated radicchio" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Bel Fiore</h3><p class="type">Variegated radicchio</p><p class="desc">Cream-colored heads splashed with rose, crisp and gently bitter.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Bel Fiore to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v060" data-sec="Salad greens and chicories" data-name="Rosalba" data-type="Pink radicchio" data-img="img/060.webp" data-q="rosalba pink radicchio loose, pillowy heads of soft rose-pink leaves, milder than the red radicchios. salad greens and chicories">
+<div class="ph" data-toggle><img src="img/060.webp" alt="Rosalba, pink radicchio" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Rosalba</h3><p class="type">Pink radicchio</p><p class="desc">Loose, pillowy heads of soft rose-pink leaves, milder than the red radicchios.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Rosalba to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article>
+</div>
+</section><section class="sec" id="brassicas-and-leafy-greens" data-cat="veg" aria-labelledby="brassicas-and-leafy-greens-h">
+<header class="sec-head">
+<div><h2 id="brassicas-and-leafy-greens-h">Brassicas and leafy greens</h2><p class="count">14 varieties</p></div>
+<button class="fchoice" type="button" aria-pressed="false" data-sec="Brassicas and leafy greens"><span class="box" aria-hidden="true"></span>Let Frank choose for me</button>
+</header>
+<div class="grid">
+<article class="card" id="v061" data-sec="Brassicas and leafy greens" data-name="Green Magic" data-type="Broccoli" data-img="img/061.webp" data-q="green magic broccoli domed blue-green heads, followed by plenty of tender side shoots. brassicas and leafy greens">
+<div class="ph" data-toggle><img src="img/061.webp" alt="Green Magic, broccoli" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Green Magic</h3><p class="type">Broccoli</p><p class="desc">Domed blue-green heads, followed by plenty of tender side shoots.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Green Magic to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v062" data-sec="Brassicas and leafy greens" data-name="Snow Crown" data-type="Cauliflower" data-img="img/062.webp" data-q="snow crown cauliflower early white cauliflower with dense, mild, sweet heads. brassicas and leafy greens">
+<div class="ph" data-toggle><img src="img/062.webp" alt="Snow Crown, cauliflower" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Snow Crown</h3><p class="type">Cauliflower</p><p class="desc">Early white cauliflower with dense, mild, sweet heads.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Snow Crown to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v063" data-sec="Brassicas and leafy greens" data-name="Fioretto 70" data-type="Sprouting cauliflower" data-img="img/063.webp" data-q="fioretto 70 sprouting cauliflower loose white florets on long, sweet, tender green stems. brassicas and leafy greens">
+<div class="ph" data-toggle><img src="img/063.webp" alt="Fioretto 70, sprouting cauliflower" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Fioretto 70</h3><p class="type">Sprouting cauliflower</p><p class="desc">Loose white florets on long, sweet, tender green stems.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Fioretto 70 to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v074" data-sec="Brassicas and leafy greens" data-name="BC-1611" data-type="Sprouting broccoli" data-img="img/074.webp" data-q="bc-1611 sprouting broccoli slender stems topped with small florets, sweet and tender from tip to base. brassicas and leafy greens">
+<div class="ph" data-toggle><img src="img/074.webp" alt="BC-1611, sprouting broccoli" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>BC-1611</h3><p class="type">Sprouting broccoli</p><p class="desc">Slender stems topped with small florets, sweet and tender from tip to base.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add BC-1611 to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v064" data-sec="Brassicas and leafy greens" data-name="Farao" data-type="Green cabbage" data-img="img/064.webp" data-q="farao green cabbage quick, round green cabbage with crisp, sweet leaves for slaw and salads. brassicas and leafy greens">
+<div class="ph" data-toggle><img src="img/064.webp" alt="Farao, green cabbage" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Farao</h3><p class="type">Green cabbage</p><p class="desc">Quick, round green cabbage with crisp, sweet leaves for slaw and salads.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Farao to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v065" data-sec="Brassicas and leafy greens" data-name="Storage No. 4" data-type="Storage cabbage" data-img="img/065.webp" data-q="storage no. 4 storage cabbage dense green cabbage that keeps well into winter. brassicas and leafy greens">
+<div class="ph" data-toggle><img src="img/065.webp" alt="Storage No. 4, storage cabbage" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Storage No. 4</h3><p class="type">Storage cabbage</p><p class="desc">Dense green cabbage that keeps well into winter.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Storage No. 4 to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v066" data-sec="Brassicas and leafy greens" data-name="Integro" data-type="Red cabbage" data-img="img/066.webp" data-q="integro red cabbage deep red-purple heads, crisp and peppery-sweet, for slaw and braising. brassicas and leafy greens">
+<div class="ph" data-toggle><img src="img/066.webp" alt="Integro, red cabbage" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Integro</h3><p class="type">Red cabbage</p><p class="desc">Deep red-purple heads, crisp and peppery-sweet, for slaw and braising.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Integro to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v069" data-sec="Brassicas and leafy greens" data-name="Famosa" data-type="Savoy cabbage" data-img="img/069.webp" data-q="famosa savoy cabbage crinkled, deep-green savoy with tender, sweet leaves for slaw and cooking. brassicas and leafy greens">
+<div class="ph" data-toggle><img src="img/069.webp" alt="Famosa, savoy cabbage" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Famosa</h3><p class="type">Savoy cabbage</p><p class="desc">Crinkled, deep-green savoy with tender, sweet leaves for slaw and cooking.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Famosa to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v067" data-sec="Brassicas and leafy greens" data-name="Blues" data-type="Napa cabbage" data-img="img/067.webp" data-q="blues napa cabbage tall, pale-green heads with crisp, mild, juicy leaves. brassicas and leafy greens">
+<div class="ph" data-toggle><img src="img/067.webp" alt="Blues, napa cabbage" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Blues</h3><p class="type">Napa cabbage</p><p class="desc">Tall, pale-green heads with crisp, mild, juicy leaves.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Blues to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v068" data-sec="Brassicas and leafy greens" data-name="Joi Choi" data-type="Bok choy" data-img="img/068.webp" data-q="joi choi bok choy thick white stems and dark-green leaves, crisp and juicy, for stir-fries and soups. brassicas and leafy greens">
+<div class="ph" data-toggle><img src="img/068.webp" alt="Joi Choi, bok choy" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Joi Choi</h3><p class="type">Bok choy</p><p class="desc">Thick white stems and dark-green leaves, crisp and juicy, for stir-fries and soups.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Joi Choi to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v070" data-sec="Brassicas and leafy greens" data-name="Winterbor" data-type="Curly kale" data-img="img/070.webp" data-q="winterbor curly kale tightly frilled, blue-green kale that grows sweeter after frost. brassicas and leafy greens">
+<div class="ph" data-toggle><img src="img/070.webp" alt="Winterbor, curly kale" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Winterbor</h3><p class="type">Curly kale</p><p class="desc">Tightly frilled, blue-green kale that grows sweeter after frost.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Winterbor to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v071" data-sec="Brassicas and leafy greens" data-name="Black Magic" data-type="Lacinato kale" data-img="img/071.webp" data-q="black magic lacinato kale dark, pebbled dinosaur kale with a deep, earthy sweetness. brassicas and leafy greens">
+<div class="ph" data-toggle><img src="img/071.webp" alt="Black Magic, lacinato kale" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Black Magic</h3><p class="type">Lacinato kale</p><p class="desc">Dark, pebbled dinosaur kale with a deep, earthy sweetness.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Black Magic to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v072" data-sec="Brassicas and leafy greens" data-name="Red Russian" data-type="Russian kale" data-img="img/072.webp" data-q="red russian russian kale flat, oak-shaped leaves on purple stems, tender and sweet. brassicas and leafy greens">
+<div class="ph" data-toggle><img src="img/072.webp" alt="Red Russian, russian kale" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Red Russian</h3><p class="type">Russian kale</p><p class="desc">Flat, oak-shaped leaves on purple stems, tender and sweet.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Red Russian to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v073" data-sec="Brassicas and leafy greens" data-name="Morris Heading" data-type="Collards" data-img="img/073.webp" data-q="morris heading collards savoyed, loose-heading collards with rich, mellow flavor. brassicas and leafy greens">
+<div class="ph" data-toggle><img src="img/073.webp" alt="Morris Heading, collards" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Morris Heading</h3><p class="type">Collards</p><p class="desc">Savoyed, loose-heading collards with rich, mellow flavor.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Morris Heading to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article>
+</div>
+</section><section class="sec" id="beans-and-peas" data-cat="veg" aria-labelledby="beans-and-peas-h">
+<header class="sec-head">
+<div><h2 id="beans-and-peas-h">Beans and peas</h2><p class="count">5 varieties</p></div>
+<button class="fchoice" type="button" aria-pressed="false" data-sec="Beans and peas"><span class="box" aria-hidden="true"></span>Let Frank choose for me</button>
+</header>
+<div class="grid">
+<article class="card" id="v075" data-sec="Beans and peas" data-name="Provider" data-type="Bush bean" data-img="img/075.webp" data-q="provider bush bean round, medium-green snap beans with classic, beany flavor. beans and peas">
+<div class="ph" data-toggle><img src="img/075.webp" alt="Provider, bush bean" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Provider</h3><p class="type">Bush bean</p><p class="desc">Round, medium-green snap beans with classic, beany flavor.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Provider to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v076" data-sec="Beans and peas" data-name="Jade" data-type="Bush bean" data-img="img/076.webp" data-q="jade bush bean long, slim, deep-green snap beans that stay tender and sweet. beans and peas">
+<div class="ph" data-toggle><img src="img/076.webp" alt="Jade, bush bean" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Jade</h3><p class="type">Bush bean</p><p class="desc">Long, slim, deep-green snap beans that stay tender and sweet.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Jade to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v077" data-sec="Beans and peas" data-name="Maxibel" data-type="Filet bean" data-img="img/077.webp" data-q="maxibel filet bean slender french haricots verts, delicate and tender. beans and peas">
+<div class="ph" data-toggle><img src="img/077.webp" alt="Maxibel, filet bean" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Maxibel</h3><p class="type">Filet bean</p><p class="desc">Slender French haricots verts, delicate and tender.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Maxibel to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v078" data-sec="Beans and peas" data-name="Beauregarde" data-type="Snow pea" data-img="img/078.webp" data-q="beauregarde snow pea flat snow pea pods, sweet and crunchy even at full size. beans and peas">
+<div class="ph" data-toggle><img src="img/078.webp" alt="Beauregarde, snow pea" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Beauregarde</h3><p class="type">Snow pea</p><p class="desc">Flat snow pea pods, sweet and crunchy even at full size.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Beauregarde to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v079" data-sec="Beans and peas" data-name="Sugar Snap" data-type="Snap pea" data-img="img/079.webp" data-q="sugar snap snap pea the original snap pea: plump, juicy pods with outstanding sweetness. beans and peas">
+<div class="ph" data-toggle><img src="img/079.webp" alt="Sugar Snap, snap pea" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Sugar Snap</h3><p class="type">Snap pea</p><p class="desc">The original snap pea: plump, juicy pods with outstanding sweetness.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Sugar Snap to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article>
+</div>
+</section><section class="sec" id="carrots" data-cat="veg" aria-labelledby="carrots-h">
+<header class="sec-head">
+<div><h2 id="carrots-h">Carrots</h2><p class="count">3 varieties</p></div>
+<button class="fchoice" type="button" aria-pressed="false" data-sec="Carrots"><span class="box" aria-hidden="true"></span>Let Frank choose for me</button>
+</header>
+<div class="grid">
+<article class="card" id="v080" data-sec="Carrots" data-name="Napoli" data-type="Orange carrot" data-img="img/080.webp" data-q="napoli orange carrot smooth, early orange carrot, sweet and crisp with a bright finish. carrots">
+<div class="ph" data-toggle><img src="img/080.webp" alt="Napoli, orange carrot" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Napoli</h3><p class="type">Orange carrot</p><p class="desc">Smooth, early orange carrot, sweet and crisp with a bright finish.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Napoli to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v081" data-sec="Carrots" data-name="Purple Elite" data-type="Purple carrot" data-img="img/081.webp" data-q="purple elite purple carrot deep-purple carrot with a sweet, nutty flavor. carrots">
+<div class="ph" data-toggle><img src="img/081.webp" alt="Purple Elite, purple carrot" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Purple Elite</h3><p class="type">Purple carrot</p><p class="desc">Deep-purple carrot with a sweet, nutty flavor.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Purple Elite to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v082" data-sec="Carrots" data-name="Yellowbunch" data-type="Yellow carrot" data-img="img/082.webp" data-q="yellowbunch yellow carrot bright yellow carrot with a sweet, fruity flavor. carrots">
+<div class="ph" data-toggle><img src="img/082.webp" alt="Yellowbunch, yellow carrot" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Yellowbunch</h3><p class="type">Yellow carrot</p><p class="desc">Bright yellow carrot with a sweet, fruity flavor.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Yellowbunch to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article>
+</div>
+</section><section class="sec" id="beets-and-roots" data-cat="veg" aria-labelledby="beets-and-roots-h">
+<header class="sec-head">
+<div><h2 id="beets-and-roots-h">Beets and roots</h2><p class="count">4 varieties</p></div>
+<button class="fchoice" type="button" aria-pressed="false" data-sec="Beets and roots"><span class="box" aria-hidden="true"></span>Let Frank choose for me</button>
+</header>
+<div class="grid">
+<article class="card" id="v083" data-sec="Beets and roots" data-name="Merlin" data-type="Red beet" data-img="img/083.webp" data-q="merlin red beet deep red beet, notably sweet, with smooth, fine-textured flesh. beets and roots">
+<div class="ph" data-toggle><img src="img/083.webp" alt="Merlin, red beet" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Merlin</h3><p class="type">Red beet</p><p class="desc">Deep red beet, notably sweet, with smooth, fine-textured flesh.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Merlin to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v084" data-sec="Beets and roots" data-name="Chioggia Guardsmark" data-type="Striped beet" data-img="img/084.webp" data-q="chioggia guardsmark striped beet italian heirloom with candy-striped rings of pink and white, mild and sweet. beets and roots">
+<div class="ph" data-toggle><img src="img/084.webp" alt="Chioggia Guardsmark, striped beet" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Chioggia Guardsmark</h3><p class="type">Striped beet</p><p class="desc">Italian heirloom with candy-striped rings of pink and white, mild and sweet.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Chioggia Guardsmark to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v085" data-sec="Beets and roots" data-name="Badger Flame" data-type="Golden beet" data-img="img/085.webp" data-q="badger flame golden beet long orange-gold beet without the earthy bite, mild and sweet enough to eat raw. beets and roots">
+<div class="ph" data-toggle><img src="img/085.webp" alt="Badger Flame, golden beet" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Badger Flame</h3><p class="type">Golden beet</p><p class="desc">Long orange-gold beet without the earthy bite, mild and sweet enough to eat raw.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Badger Flame to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v086" data-sec="Beets and roots" data-name="Javelin" data-type="Parsnip" data-img="img/086.webp" data-q="javelin parsnip smooth, long white parsnips that turn sweet after frost. beets and roots">
+<div class="ph" data-toggle><img src="img/086.webp" alt="Javelin, parsnip" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Javelin</h3><p class="type">Parsnip</p><p class="desc">Smooth, long white parsnips that turn sweet after frost.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Javelin to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article>
+</div>
+</section><section class="sec" id="radishes-turnips-and-kohlrabi" data-cat="veg" aria-labelledby="radishes-turnips-and-kohlrabi-h">
+<header class="sec-head">
+<div><h2 id="radishes-turnips-and-kohlrabi-h">Radishes, turnips and kohlrabi</h2><p class="count">6 varieties</p></div>
+<button class="fchoice" type="button" aria-pressed="false" data-sec="Radishes, turnips and kohlrabi"><span class="box" aria-hidden="true"></span>Let Frank choose for me</button>
+</header>
+<div class="grid">
+<article class="card" id="v087" data-sec="Radishes, turnips and kohlrabi" data-name="Crunchy King" data-type="Round radish" data-img="img/087.webp" data-q="crunchy king round radish bright red round radish, crisp and mildly peppery. radishes, turnips and kohlrabi">
+<div class="ph" data-toggle><img src="img/087.webp" alt="Crunchy King, round radish" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Crunchy King</h3><p class="type">Round radish</p><p class="desc">Bright red round radish, crisp and mildly peppery.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Crunchy King to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v088" data-sec="Radishes, turnips and kohlrabi" data-name="French Breakfast" data-type="Breakfast radish" data-img="img/088.webp" data-q="french breakfast breakfast radish elongated red radish with a white tip, crisp and mild. radishes, turnips and kohlrabi">
+<div class="ph" data-toggle><img src="img/088.webp" alt="French Breakfast, breakfast radish" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>French Breakfast</h3><p class="type">Breakfast radish</p><p class="desc">Elongated red radish with a white tip, crisp and mild.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add French Breakfast to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v089" data-sec="Radishes, turnips and kohlrabi" data-name="Red Meat" data-type="Watermelon radish" data-img="img/089.webp" data-q="red meat watermelon radish pale green outside with a magenta heart, crisp and mildly sweet. radishes, turnips and kohlrabi">
+<div class="ph" data-toggle><img src="img/089.webp" alt="Red Meat, watermelon radish" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Red Meat</h3><p class="type">Watermelon radish</p><p class="desc">Pale green outside with a magenta heart, crisp and mildly sweet.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Red Meat to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v090" data-sec="Radishes, turnips and kohlrabi" data-name="Kolibri" data-type="Kohlrabi" data-img="img/090.webp" data-q="kolibri kohlrabi purple kohlrabi with crisp, juicy, mild white flesh. radishes, turnips and kohlrabi">
+<div class="ph" data-toggle><img src="img/090.webp" alt="Kolibri, kohlrabi" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Kolibri</h3><p class="type">Kohlrabi</p><p class="desc">Purple kohlrabi with crisp, juicy, mild white flesh.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Kolibri to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v091" data-sec="Radishes, turnips and kohlrabi" data-name="Hakurei" data-type="Salad turnip" data-img="img/091.webp" data-q="hakurei salad turnip sweet, tender white turnip that is delicious raw, greens and all. radishes, turnips and kohlrabi">
+<div class="ph" data-toggle><img src="img/091.webp" alt="Hakurei, salad turnip" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Hakurei</h3><p class="type">Salad turnip</p><p class="desc">Sweet, tender white turnip that is delicious raw, greens and all.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Hakurei to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v092" data-sec="Radishes, turnips and kohlrabi" data-name="Purple Top White Globe" data-type="Storage turnip" data-img="img/092.webp" data-q="purple top white globe storage turnip classic purple-shouldered turnip for roasting, mashing and soups. radishes, turnips and kohlrabi">
+<div class="ph" data-toggle><img src="img/092.webp" alt="Purple Top White Globe, storage turnip" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Purple Top White Globe</h3><p class="type">Storage turnip</p><p class="desc">Classic purple-shouldered turnip for roasting, mashing and soups.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Purple Top White Globe to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article>
+</div>
+</section><section class="sec" id="onions-and-garlic" data-cat="veg" aria-labelledby="onions-and-garlic-h">
+<header class="sec-head">
+<div><h2 id="onions-and-garlic-h">Onions and garlic</h2><p class="count">7 varieties</p></div>
+<button class="fchoice" type="button" aria-pressed="false" data-sec="Onions and garlic"><span class="box" aria-hidden="true"></span>Let Frank choose for me</button>
+</header>
+<div class="grid">
+<article class="card" id="v093" data-sec="Onions and garlic" data-name="Patterson" data-type="Yellow onion" data-img="img/093.webp" data-q="patterson yellow onion golden storage onion with firm, pungent flesh that keeps for months. onions and garlic">
+<div class="ph" data-toggle><img src="img/093.webp" alt="Patterson, yellow onion" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Patterson</h3><p class="type">Yellow onion</p><p class="desc">Golden storage onion with firm, pungent flesh that keeps for months.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Patterson to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v094" data-sec="Onions and garlic" data-name="Redwing" data-type="Red onion" data-img="img/094.webp" data-q="redwing red onion deep-red storage onion with firm rings and a full, sharp flavor. onions and garlic">
+<div class="ph" data-toggle><img src="img/094.webp" alt="Redwing, red onion" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Redwing</h3><p class="type">Red onion</p><p class="desc">Deep-red storage onion with firm rings and a full, sharp flavor.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Redwing to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v095" data-sec="Onions and garlic" data-name="Ailsa Craig" data-type="Sweet onion" data-img="img/095.webp" data-q="ailsa craig sweet onion huge, mild, sweet onion for fresh summer eating. onions and garlic">
+<div class="ph" data-toggle><img src="img/095.webp" alt="Ailsa Craig, sweet onion" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Ailsa Craig</h3><p class="type">Sweet onion</p><p class="desc">Huge, mild, sweet onion for fresh summer eating.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Ailsa Craig to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v096" data-sec="Onions and garlic" data-name="Ambition" data-type="Shallot" data-img="img/096.webp" data-q="ambition shallot copper-skinned shallots with a delicate, sweet onion flavor. onions and garlic">
+<div class="ph" data-toggle><img src="img/096.webp" alt="Ambition, shallot" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Ambition</h3><p class="type">Shallot</p><p class="desc">Copper-skinned shallots with a delicate, sweet onion flavor.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Ambition to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v097" data-sec="Onions and garlic" data-name="Music" data-type="Hardneck garlic" data-img="img/097.webp" data-q="music hardneck garlic big, easy-to-peel cloves with a rich, strong flavor. onions and garlic">
+<div class="ph" data-toggle><img src="img/097.webp" alt="Music, hardneck garlic" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Music</h3><p class="type">Hardneck garlic</p><p class="desc">Big, easy-to-peel cloves with a rich, strong flavor.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Music to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v098" data-sec="Onions and garlic" data-name="King Richard" data-type="Leek" data-img="img/098.webp" data-q="king richard leek long, slender leeks with tender white shanks for fall cooking. onions and garlic">
+<div class="ph" data-toggle><img src="img/098.webp" alt="King Richard, leek" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>King Richard</h3><p class="type">Leek</p><p class="desc">Long, slender leeks with tender white shanks for fall cooking.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add King Richard to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v099" data-sec="Onions and garlic" data-name="Evergreen Hardy White" data-type="Scallion" data-img="img/099.webp" data-q="evergreen hardy white scallion mild white scallions that winter over for the earliest spring bunches. onions and garlic">
+<div class="ph" data-toggle><img src="img/099.webp" alt="Evergreen Hardy White, scallion" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Evergreen Hardy White</h3><p class="type">Scallion</p><p class="desc">Mild white scallions that winter over for the earliest spring bunches.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Evergreen Hardy White to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article>
+</div>
+</section><section class="sec" id="specialty-vegetables" data-cat="veg" aria-labelledby="specialty-vegetables-h">
+<header class="sec-head">
+<div><h2 id="specialty-vegetables-h">Specialty vegetables</h2><p class="count">4 varieties</p></div>
+<button class="fchoice" type="button" aria-pressed="false" data-sec="Specialty vegetables"><span class="box" aria-hidden="true"></span>Let Frank choose for me</button>
+</header>
+<div class="grid">
+<article class="card" id="v100" data-sec="Specialty vegetables" data-name="Preludio" data-type="Florence fennel" data-img="img/100.webp" data-q="preludio florence fennel round white bulbs, crisp and lightly sweet with a gentle anise flavor. specialty vegetables">
+<div class="ph" data-toggle><img src="img/100.webp" alt="Preludio, florence fennel" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Preludio</h3><p class="type">Florence fennel</p><p class="desc">Round white bulbs, crisp and lightly sweet with a gentle anise flavor.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Preludio to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v101" data-sec="Specialty vegetables" data-name="Imperial Star" data-type="Artichoke" data-img="img/101.webp" data-q="imperial star artichoke green globe artichokes with tender hearts, ready in a single season. specialty vegetables">
+<div class="ph" data-toggle><img src="img/101.webp" alt="Imperial Star, artichoke" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Imperial Star</h3><p class="type">Artichoke</p><p class="desc">Green globe artichokes with tender hearts, ready in a single season.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Imperial Star to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v102" data-sec="Specialty vegetables" data-name="Tango" data-type="Celery" data-img="img/102.webp" data-q="tango celery tender, crisp, string-free celery with a clean, fresh flavor. specialty vegetables">
+<div class="ph" data-toggle><img src="img/102.webp" alt="Tango, celery" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Tango</h3><p class="type">Celery</p><p class="desc">Tender, crisp, string-free celery with a clean, fresh flavor.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Tango to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v103" data-sec="Specialty vegetables" data-name="Clemson Spineless" data-type="Okra" data-img="img/103.webp" data-q="clemson spineless okra tender, spineless green pods for frying, roasting and gumbo. specialty vegetables">
+<div class="ph" data-toggle><img src="img/103.webp" alt="Clemson Spineless, okra" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Clemson Spineless</h3><p class="type">Okra</p><p class="desc">Tender, spineless green pods for frying, roasting and gumbo.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Clemson Spineless to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article>
+</div>
+</section><section class="sec" id="strawberries" data-cat="fruit" aria-labelledby="strawberries-h">
+<header class="sec-head">
+<div><h2 id="strawberries-h">Strawberries</h2><p class="count">2 varieties</p></div>
+<button class="fchoice" type="button" aria-pressed="false" data-sec="Strawberries"><span class="box" aria-hidden="true"></span>Let Frank choose for me</button>
+</header>
+<div class="grid">
+<article class="card" id="v104" data-sec="Strawberries" data-name="Jewel" data-type="June-bearing" data-img="img/104.webp" data-q="jewel june-bearing large, glossy red berries with firm, sweet flesh in one early-summer flush. strawberries">
+<div class="ph" data-toggle><img src="img/104.webp" alt="Jewel, june-bearing" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Jewel</h3><p class="type">June-bearing</p><p class="desc">Large, glossy red berries with firm, sweet flesh in one early-summer flush.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Jewel to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v105" data-sec="Strawberries" data-name="Albion" data-type="Everbearing" data-img="img/105.webp" data-q="albion everbearing large, firm, sweet berries that keep coming from late summer into fall. strawberries">
+<div class="ph" data-toggle><img src="img/105.webp" alt="Albion, everbearing" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Albion</h3><p class="type">Everbearing</p><p class="desc">Large, firm, sweet berries that keep coming from late summer into fall.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Albion to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article>
+</div>
+</section><section class="sec" id="herbs" data-cat="herbs" aria-labelledby="herbs-h">
+<header class="sec-head">
+<div><h2 id="herbs-h">Herbs</h2><p class="count">11 varieties</p></div>
+<button class="fchoice" type="button" aria-pressed="false" data-sec="Herbs"><span class="box" aria-hidden="true"></span>Let Frank choose for me</button>
+</header>
+<div class="grid">
+<article class="card" id="v106" data-sec="Herbs" data-name="Prospera" data-type="Genovese basil" data-img="img/106.webp" data-q="prospera genovese basil large, glossy leaves with the sweet, clove-like aroma pesto calls for. herbs">
+<div class="ph" data-toggle><img src="img/106.webp" alt="Prospera, genovese basil" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Prospera</h3><p class="type">Genovese basil</p><p class="desc">Large, glossy leaves with the sweet, clove-like aroma pesto calls for.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Prospera to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v107" data-sec="Herbs" data-name="Siam Queen" data-type="Thai basil" data-img="img/107.webp" data-q="siam queen thai basil glossy leaves and purple flowers with a sweet licorice-anise edge. herbs">
+<div class="ph" data-toggle><img src="img/107.webp" alt="Siam Queen, thai basil" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Siam Queen</h3><p class="type">Thai basil</p><p class="desc">Glossy leaves and purple flowers with a sweet licorice-anise edge.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Siam Queen to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v108" data-sec="Herbs" data-name="Giant of Italy" data-type="Flat-leaf parsley" data-img="img/108.webp" data-q="giant of italy flat-leaf parsley big, dark, flat leaves with bold, fresh flavor. herbs">
+<div class="ph" data-toggle><img src="img/108.webp" alt="Giant of Italy, flat-leaf parsley" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Giant of Italy</h3><p class="type">Flat-leaf parsley</p><p class="desc">Big, dark, flat leaves with bold, fresh flavor.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Giant of Italy to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v109" data-sec="Herbs" data-name="Santo" data-type="Cilantro" data-img="img/109.webp" data-q="santo cilantro bright, citrusy leaves on plants that are slow to go to seed. herbs">
+<div class="ph" data-toggle><img src="img/109.webp" alt="Santo, cilantro" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Santo</h3><p class="type">Cilantro</p><p class="desc">Bright, citrusy leaves on plants that are slow to go to seed.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Santo to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v110" data-sec="Herbs" data-name="Bouquet" data-type="Dill" data-img="img/110.webp" data-q="bouquet dill feathery, aromatic dill for leaves, flower heads and seed. herbs">
+<div class="ph" data-toggle><img src="img/110.webp" alt="Bouquet, dill" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Bouquet</h3><p class="type">Dill</p><p class="desc">Feathery, aromatic dill for leaves, flower heads and seed.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Bouquet to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v111" data-sec="Herbs" data-name="Greek oregano" data-type="Oregano" data-img="img/111.webp" data-q="greek oregano oregano true cooking oregano with a strong, pungent, peppery flavor. herbs">
+<div class="ph" data-toggle><img src="img/111.webp" alt="Greek oregano, oregano" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Greek oregano</h3><p class="type">Oregano</p><p class="desc">True cooking oregano with a strong, pungent, peppery flavor.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Greek oregano to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v112" data-sec="Herbs" data-name="German Winter" data-type="Thyme" data-img="img/112.webp" data-q="german winter thyme hardy, broad-leaf thyme with a warm, earthy flavor. herbs">
+<div class="ph" data-toggle><img src="img/112.webp" alt="German Winter, thyme" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>German Winter</h3><p class="type">Thyme</p><p class="desc">Hardy, broad-leaf thyme with a warm, earthy flavor.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add German Winter to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v113" data-sec="Herbs" data-name="Common chives" data-type="Chives" data-img="img/113.webp" data-q="common chives chives slender hollow leaves with a mild onion flavor and edible purple blossoms. herbs">
+<div class="ph" data-toggle><img src="img/113.webp" alt="Common chives, chives" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Common chives</h3><p class="type">Chives</p><p class="desc">Slender hollow leaves with a mild onion flavor and edible purple blossoms.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Common chives to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v114" data-sec="Herbs" data-name="Berggarten" data-type="Sage" data-img="img/114.webp" data-q="berggarten sage broad, round, silver-green leaves with a mellow, savory flavor. herbs">
+<div class="ph" data-toggle><img src="img/114.webp" alt="Berggarten, sage" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Berggarten</h3><p class="type">Sage</p><p class="desc">Broad, round, silver-green leaves with a mellow, savory flavor.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Berggarten to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v115" data-sec="Herbs" data-name="Tuscan Blue" data-type="Rosemary" data-img="img/115.webp" data-q="tuscan blue rosemary upright rosemary with a resinous, piney flavor and blue flowers. herbs">
+<div class="ph" data-toggle><img src="img/115.webp" alt="Tuscan Blue, rosemary" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Tuscan Blue</h3><p class="type">Rosemary</p><p class="desc">Upright rosemary with a resinous, piney flavor and blue flowers.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Tuscan Blue to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v116" data-sec="Herbs" data-name="Kentucky Colonel" data-type="Spearmint" data-img="img/116.webp" data-q="kentucky colonel spearmint large-leaved spearmint with a sweet, cool flavor for drinks and cooking. herbs">
+<div class="ph" data-toggle><img src="img/116.webp" alt="Kentucky Colonel, spearmint" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Kentucky Colonel</h3><p class="type">Spearmint</p><p class="desc">Large-leaved spearmint with a sweet, cool flavor for drinks and cooking.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Kentucky Colonel to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article>
+</div>
+</section><section class="sec" id="cut-flowers" data-cat="flowers" aria-labelledby="cut-flowers-h">
+<header class="sec-head">
+<div><h2 id="cut-flowers-h">Cut flowers</h2><p class="count">13 varieties</p></div>
+<button class="fchoice" type="button" aria-pressed="false" data-sec="Cut flowers"><span class="box" aria-hidden="true"></span>Let Frank choose for me</button>
+</header>
+<div class="grid">
+<article class="card" id="v117" data-sec="Cut flowers" data-name="Benary&#x27;s Giant mix" data-type="Large double zinnia" data-img="img/117.webp" data-q="benary&#x27;s giant mix large double zinnia big, fully double blooms on long stems in scarlet, orange, golden yellow, salmon, coral, bright pink, carmine, wine, purple, lilac, lime and white. cut flowers">
+<div class="ph" data-toggle><img src="img/117.webp" alt="Benary&#x27;s Giant mix, large double zinnia" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Benary&#x27;s Giant mix</h3><p class="type">Large double zinnia</p><p class="desc">Big, fully double blooms on long stems in scarlet, orange, golden yellow, salmon, coral, bright pink, carmine, wine, purple, lilac, lime and white.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Benary&#x27;s Giant mix to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v118" data-sec="Cut flowers" data-name="Queen Lime mix" data-type="Antique zinnia" data-img="img/118.webp" data-q="queen lime mix antique zinnia zinnias in muted antique tones of dusty rose, blush, lime green and mauve. cut flowers">
+<div class="ph" data-toggle><img src="img/118.webp" alt="Queen Lime mix, antique zinnia" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Queen Lime mix</h3><p class="type">Antique zinnia</p><p class="desc">Zinnias in muted antique tones of dusty rose, blush, lime green and mauve.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Queen Lime mix to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v119" data-sec="Cut flowers" data-name="Oklahoma series" data-type="Small double zinnia" data-img="img/119.webp" data-q="oklahoma series small double zinnia small, fully double zinnias in salmon, pink, scarlet, gold and white, ideal for bouquets. cut flowers">
+<div class="ph" data-toggle><img src="img/119.webp" alt="Oklahoma series, small double zinnia" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Oklahoma series</h3><p class="type">Small double zinnia</p><p class="desc">Small, fully double zinnias in salmon, pink, scarlet, gold and white, ideal for bouquets.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Oklahoma series to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v121" data-sec="Cut flowers" data-name="Autumn Beauty" data-type="Branching heirloom sunflower" data-img="img/121.webp" data-q="autumn beauty branching heirloom sunflower many-stemmed plants that bloom over a long season in lemon, gold, bronze and burgundy. cut flowers">
+<div class="ph" data-toggle><img src="img/121.webp" alt="Autumn Beauty, branching heirloom sunflower" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Autumn Beauty</h3><p class="type">Branching heirloom sunflower</p><p class="desc">Many-stemmed plants that bloom over a long season in lemon, gold, bronze and burgundy.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Autumn Beauty to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v122" data-sec="Cut flowers" data-name="Soraya" data-type="Branching hybrid sunflower" data-img="img/122.webp" data-q="soraya branching hybrid sunflower bright orange-gold petals around a dark chocolate center, on many-stemmed plants that bloom for weeks. cut flowers">
+<div class="ph" data-toggle><img src="img/122.webp" alt="Soraya, branching hybrid sunflower" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Soraya</h3><p class="type">Branching hybrid sunflower</p><p class="desc">Bright orange-gold petals around a dark chocolate center, on many-stemmed plants that bloom for weeks.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Soraya to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v124" data-sec="Cut flowers" data-name="Double Click series" data-type="Double cosmos" data-img="img/124.webp" data-q="double click series double cosmos full, ruffled cosmos in magenta, rose, white and bicolors. cut flowers">
+<div class="ph" data-toggle><img src="img/124.webp" alt="Double Click series, double cosmos" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Double Click series</h3><p class="type">Double cosmos</p><p class="desc">Full, ruffled cosmos in magenta, rose, white and bicolors.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Double Click series to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v125" data-sec="Cut flowers" data-name="Cupcake series" data-type="Cup-shaped cosmos" data-img="img/125.webp" data-q="cupcake series cup-shaped cosmos fluted, cup-shaped blooms in white and soft pink on long stems. cut flowers">
+<div class="ph" data-toggle><img src="img/125.webp" alt="Cupcake series, cup-shaped cosmos" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Cupcake series</h3><p class="type">Cup-shaped cosmos</p><p class="desc">Fluted, cup-shaped blooms in white and soft pink on long stems.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Cupcake series to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v126" data-sec="Cut flowers" data-name="Rocket mix" data-type="Snapdragon" data-img="img/126.webp" data-q="rocket mix snapdragon tall spikes in rose, orchid, bronze, gold, red and white. cut flowers">
+<div class="ph" data-toggle><img src="img/126.webp" alt="Rocket mix, snapdragon" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Rocket mix</h3><p class="type">Snapdragon</p><p class="desc">Tall spikes in rose, orchid, bronze, gold, red and white.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Rocket mix to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v127" data-sec="Cut flowers" data-name="Sunday and Celway series" data-type="Plumed celosia" data-img="img/127.webp" data-q="sunday and celway series plumed celosia feathery plumes in bronze, salmon, orange, red and wine. cut flowers">
+<div class="ph" data-toggle><img src="img/127.webp" alt="Sunday and Celway series, plumed celosia" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Sunday and Celway series</h3><p class="type">Plumed celosia</p><p class="desc">Feathery plumes in bronze, salmon, orange, red and wine.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Sunday and Celway series to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v128" data-sec="Cut flowers" data-name="Cramer&#x27;s Burgundy" data-type="Crested celosia" data-img="img/128.webp" data-q="cramer&#x27;s burgundy crested celosia velvety, deep-burgundy crests, striking fresh or dried. cut flowers">
+<div class="ph" data-toggle><img src="img/128.webp" alt="Cramer&#x27;s Burgundy, crested celosia" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Cramer&#x27;s Burgundy</h3><p class="type">Crested celosia</p><p class="desc">Velvety, deep-burgundy crests, striking fresh or dried.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Cramer&#x27;s Burgundy to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v129" data-sec="Cut flowers" data-name="Ranunculus" data-type="Spring cut flower" data-img="img/129.webp" data-q="ranunculus spring cut flower layered, rose-like blooms on long, sturdy stems in early spring. cut flowers">
+<div class="ph" data-toggle><img src="img/129.webp" alt="Ranunculus, spring cut flower" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Ranunculus</h3><p class="type">Spring cut flower</p><p class="desc">Layered, rose-like blooms on long, sturdy stems in early spring.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Ranunculus to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v130" data-sec="Cut flowers" data-name="Anemone" data-type="Spring cut flower" data-img="img/130.webp" data-q="anemone spring cut flower poppy-like blooms with dark centers in rich jewel tones. cut flowers">
+<div class="ph" data-toggle><img src="img/130.webp" alt="Anemone, spring cut flower" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Anemone</h3><p class="type">Spring cut flower</p><p class="desc">Poppy-like blooms with dark centers in rich jewel tones.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Anemone to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v123" data-sec="Cut flowers" data-name="Alaska mix" data-type="Nasturtium" data-img="img/123.webp" data-q="alaska mix nasturtium dwarf plants with cream-marbled leaves and peppery, edible blooms in red, orange and yellow. cut flowers">
+<div class="ph" data-toggle><img src="img/123.webp" alt="Alaska mix, nasturtium" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Alaska mix</h3><p class="type">Nasturtium</p><p class="desc">Dwarf plants with cream-marbled leaves and peppery, edible blooms in red, orange and yellow.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Alaska mix to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article>
+</div>
+</section><section class="sec" id="dahlias" data-cat="flowers" aria-labelledby="dahlias-h">
+<header class="sec-head">
+<div><h2 id="dahlias-h">Dahlias</h2><p class="count">12 varieties</p></div>
+<button class="fchoice" type="button" aria-pressed="false" data-sec="Dahlias"><span class="box" aria-hidden="true"></span>Let Frank choose for me</button>
+</header>
+<div class="grid">
+<article class="card" id="v132" data-sec="Dahlias" data-name="Café au Lait" data-type="Blush dinnerplate" data-img="img/132.webp" data-q="café au lait blush dinnerplate huge cream-and-blush blooms with the soft look of pastel silk. dahlias">
+<div class="ph" data-toggle><img src="img/132.webp" alt="Café au Lait, blush dinnerplate" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Café au Lait</h3><p class="type">Blush dinnerplate</p><p class="desc">Huge cream-and-blush blooms with the soft look of pastel silk.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Café au Lait to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v134" data-sec="Dahlias" data-name="Otto&#x27;s Thrill" data-type="Pink dinnerplate" data-img="img/134.webp" data-q="otto&#x27;s thrill pink dinnerplate shimmering rose-pink blooms up to a foot across. dahlias">
+<div class="ph" data-toggle><img src="img/134.webp" alt="Otto&#x27;s Thrill, pink dinnerplate" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Otto&#x27;s Thrill</h3><p class="type">Pink dinnerplate</p><p class="desc">Shimmering rose-pink blooms up to a foot across.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Otto&#x27;s Thrill to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v131" data-sec="Dahlias" data-name="Boom Boom White" data-type="White ball" data-img="img/131.webp" data-q="boom boom white white ball clean, bright-white blooms on thick, sturdy stems. dahlias">
+<div class="ph" data-toggle><img src="img/131.webp" alt="Boom Boom White, white ball" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Boom Boom White</h3><p class="type">White ball</p><p class="desc">Clean, bright-white blooms on thick, sturdy stems.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Boom Boom White to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v133" data-sec="Dahlias" data-name="Linda&#x27;s Baby" data-type="Pink-to-peach ball" data-img="img/133.webp" data-q="linda&#x27;s baby pink-to-peach ball opens bright pink and shifts to a soft peach blush as fall cools. dahlias">
+<div class="ph" data-toggle><img src="img/133.webp" alt="Linda&#x27;s Baby, pink-to-peach ball" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Linda&#x27;s Baby</h3><p class="type">Pink-to-peach ball</p><p class="desc">Opens bright pink and shifts to a soft peach blush as fall cools.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Linda&#x27;s Baby to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v139" data-sec="Dahlias" data-name="Suncrest" data-type="Yellow ball" data-img="img/139.webp" data-q="suncrest yellow ball soft canary-yellow balls with a peach-pink blush on the petal tips. dahlias">
+<div class="ph" data-toggle><img src="img/139.webp" alt="Suncrest, yellow ball" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Suncrest</h3><p class="type">Yellow ball</p><p class="desc">Soft canary-yellow balls with a peach-pink blush on the petal tips.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Suncrest to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v141" data-sec="Dahlias" data-name="Genova" data-type="Lavender ball" data-img="img/141.webp" data-q="genova lavender ball soft lavender balls with a distinctive dark eye. dahlias">
+<div class="ph" data-toggle><img src="img/141.webp" alt="Genova, lavender ball" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Genova</h3><p class="type">Lavender ball</p><p class="desc">Soft lavender balls with a distinctive dark eye.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Genova to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v136" data-sec="Dahlias" data-name="Cornel" data-type="Red ball" data-img="img/136.webp" data-q="cornel red ball perfectly formed balls in a rich cherry red. dahlias">
+<div class="ph" data-toggle><img src="img/136.webp" alt="Cornel, red ball" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Cornel</h3><p class="type">Red ball</p><p class="desc">Perfectly formed balls in a rich cherry red.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Cornel to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v137" data-sec="Dahlias" data-name="Cornel Bronze" data-type="Bronze ball" data-img="img/137.webp" data-q="cornel bronze bronze ball perfectly formed balls in a warm, heirloom-pumpkin bronze. dahlias">
+<div class="ph" data-toggle><img src="img/137.webp" alt="Cornel Bronze, bronze ball" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Cornel Bronze</h3><p class="type">Bronze ball</p><p class="desc">Perfectly formed balls in a warm, heirloom-pumpkin bronze.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Cornel Bronze to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v135" data-sec="Dahlias" data-name="Intrigue" data-type="Coral decorative" data-img="img/135.webp" data-q="intrigue coral decorative saturated coral-raspberry blooms, among the first dahlias to flower each season. dahlias">
+<div class="ph" data-toggle><img src="img/135.webp" alt="Intrigue, coral decorative" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Intrigue</h3><p class="type">Coral decorative</p><p class="desc">Saturated coral-raspberry blooms, among the first dahlias to flower each season.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Intrigue to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v140" data-sec="Dahlias" data-name="Diva" data-type="Purple decorative" data-img="img/140.webp" data-q="diva purple decorative deep, velvety purple blooms on long stems. dahlias">
+<div class="ph" data-toggle><img src="img/140.webp" alt="Diva, purple decorative" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Diva</h3><p class="type">Purple decorative</p><p class="desc">Deep, velvety purple blooms on long stems.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Diva to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v142" data-sec="Dahlias" data-name="Karma Choc" data-type="Burgundy decorative" data-img="img/142.webp" data-q="karma choc burgundy decorative deep burgundy-chocolate blooms with a velvety finish. dahlias">
+<div class="ph" data-toggle><img src="img/142.webp" alt="Karma Choc, burgundy decorative" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>Karma Choc</h3><p class="type">Burgundy decorative</p><p class="desc">Deep burgundy-chocolate blooms with a velvety finish.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add Karma Choc to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article><article class="card" id="v138" data-sec="Dahlias" data-name="David Howard" data-type="Apricot, dark foliage" data-img="img/138.webp" data-q="david howard apricot, dark foliage pumpkin-apricot flowers over dark bronze foliage, as handsome in the border as in a vase. dahlias">
+<div class="ph" data-toggle><img src="img/138.webp" alt="David Howard, apricot, dark foliage" loading="lazy" decoding="async"><span class="ribbon" aria-hidden="true">In your garden</span></div>
+<div class="info"><h3>David Howard</h3><p class="type">Apricot, dark foliage</p><p class="desc">Pumpkin-apricot flowers over dark bronze foliage, as handsome in the border as in a vase.</p></div>
+<button class="add" type="button" aria-pressed="false" data-toggle aria-label="Add David Howard to my garden"><span class="box" aria-hidden="true"></span><span class="lbl">Add to my garden</span></button>
+</article>
+</div>
+</section>
+</main>
+
+<footer class="foot">
+<div class="wrap">
+<p class="co">Feroleto Garden Co.</p>
+<svg class="sprig" width="200" height="24" viewBox="0 0 220 26" aria-hidden="true"><line x1="0" y1="13" x2="80" y2="13"></line><line x1="140" y1="13" x2="220" y2="13"></line><ellipse cx="68" cy="8.5" rx="8" ry="2.8" transform="rotate(-22 68 8.5)"></ellipse><ellipse cx="86" cy="17.5" rx="8" ry="2.8" transform="rotate(22 86 17.5)"></ellipse><ellipse cx="152" cy="8.5" rx="8" ry="2.8" transform="rotate(22 152 8.5)"></ellipse><ellipse cx="134" cy="17.5" rx="8" ry="2.8" transform="rotate(-22 134 17.5)"></ellipse><path class="seed" d="M110 4 C117 8 117 18 110 22 C103 18 103 8 110 4 Z"></path></svg>
+<p>Questions about anything in the catalog? Write to Frank at <a href="mailto:feroletofrank@gmail.com">feroletofrank@gmail.com</a>.</p>
+<details class="credits">
+<summary>Photo credits</summary>
+<p>Photographs courtesy of the seed houses and farms below, and of Wikimedia Commons contributors under the licenses noted.</p>
+<p><b>Johnny&#x27;s Selected Seeds:</b> Brandywine, San Marzano, Favorita, Five Star Grape, Sunrise Bumble Bee, Early Jalapeño, Habanero, Red Ember, Lunchbox mix, Orient Express, Marketmore 76, Qwerty, Dunja, Howden, Winter Luxury, New Red Fire, Green Forest, Starfighter, Salanova, Muir, Little Gem, Bloomsdale, Kolibri, Astro, Bright Lights, Vit, Leonardo, Bel Fiore, Green Magic, Snow Crown, Fioretto 70, Farao, Storage No. 4, Integro, Joi Choi, Famosa, Winterbor, Black Magic, Red Russian, BC-1611, Provider, Jade, Maxibel, Napoli, Purple Elite, Yellowbunch, Merlin, Chioggia Guardsmark, Javelin, Crunchy King, French Breakfast, Red Meat, Kolibri, Hakurei, Purple Top White Globe, Patterson, Redwing, Ailsa Craig, Ambition, King Richard, Evergreen Hardy White, Preludio, Imperial Star, Tango, Clemson Spineless, Sunday and Celway series, Cramer&#x27;s Burgundy</p><p><b>Floret Flower Farm:</b> Linda&#x27;s Baby, Otto&#x27;s Thrill, Intrigue, Cornel Bronze, Suncrest, Diva, Genova</p><p><b>Row 7 Seed Company:</b> Habanada, Upstate Abundance, Beauregarde, Badger Flame</p><p><b>Harris Seeds:</b> Revolution, Early Sunsation, Music</p><p><b>High Mowing Organic Seeds:</b> Traviata, Waltham Butternut</p><p><b>Territorial Seed Company:</b> Sweet Mama, Table Ace</p><p><b>Holmes Seed:</b> County Fair, Jack Be Little</p><p><b>Homegrown Tomatoes:</b> Big Beef</p><p><b>Hill Creek Farm:</b> Kellogg&#x27;s Breakfast</p><p><b>Hudson Valley Seed Co.:</b> Speckled Roman</p><p><b>Gurney&#x27;s:</b> Blush</p><p><b>Bluestem Natives:</b> Gilboa</p><p><b>Clifton Seed:</b> Calypso</p><p><b>Renee&#x27;s Garden:</b> Green Fingers</p><p><b>Adaptive Seeds:</b> Diva</p><p><b>Osborne Quality Seeds:</b> Rosalba</p><p><b>Stokes Seeds:</b> Blues</p><p><b>Sow True Seed:</b> Morris Heading</p><p><b>UMaine Cooperative Extension:</b> Jewel</p><p><b>Nourse Farms:</b> Albion</p><p><b>Practical Farmers of Iowa:</b> Prospera</p><p><b>Dave Whitinger, CC BY-SA 3.0:</b> Cherokee Purple</p><p><b>Dwight Sipler, CC BY 2.0:</b> Sungold</p><p><b>Cliff Hutson, CC BY 2.0:</b> Green Zebra</p><p><b>T. Maciejewski, CC BY-SA 3.0:</b> Costata Romanesco</p><p><b>Paul Asman and Jill Lenoble, CC BY 2.0:</b> Zephyr</p><p><b>CC BY-SA 4.0:</b> Honeynut</p><p><b>Green Mountain Girls Farm, CC BY 2.0:</b> Delicata</p><p><b>Llez, CC BY-SA 3.0:</b> Sweet Dumpling</p><p><b>Une vallée dans la lune, CC BY-SA 2.0:</b> Musquée de Provence</p><p><b>nociveglia, CC BY 2.0:</b> Galeux d&#x27;Eysines</p><p><b>Trizek, CC BY-SA 3.0:</b> Petit Gris de Rennes</p><p><b>JFVelasquez Floro, CC0:</b> Sugar Baby</p><p><b>Forest and Kim Starr, CC BY 3.0:</b> Siam Queen</p><p><b>Jeffery Martin, CC0:</b> Giant of Italy</p><p><b>David J. Stang, CC BY-SA 4.0:</b> Santo, Bouquet, Berggarten, Tuscan Blue, Alaska mix</p><p><b>Hermann Hammer, CC0:</b> Greek oregano</p><p><b>Don McCulley:</b> Benary&#x27;s Giant mix, Queen Lime mix</p><p><b>Epolk:</b> Oklahoma series</p><p><b>F. D. Richards:</b> Autumn Beauty</p><p><b>Krzysztof Ziarnek:</b> Soraya</p><p><b>Derek Ramsey:</b> Double Click series</p><p><b>Salicyna:</b> Cupcake series</p><p><b>H. Zell:</b> Rocket mix</p><p><b>Antcaesar, CC BY 3.0:</b> Ranunculus</p><p><b>Ermell, CC BY-SA 4.0:</b> Anemone</p><p><b>Agnieszka Kwiecień, CC BY-SA 4.0:</b> Boom Boom White</p><p><b>Dwergenpaartje, CC BY-SA 4.0:</b> Café au Lait</p><p><b>Aleksandrs Balodis, CC BY-SA 4.0:</b> Cornel</p><p><b>Kelvinsong, CC BY 3.0:</b> David Howard</p><p><b>Cillas, CC BY-SA 4.0:</b> Karma Choc</p><p><b>Wikimedia Commons contributors:</b> German Butterball, Adirondack Blue, Sugar Snap, German Winter, Common chives, Kentucky Colonel</p>
+</details>
+</div>
+</footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="d-title">
+<div class="d-head">
+<div><h2 id="d-title" tabindex="-1">My garden list</h2><p id="d-sum">Nothing picked yet</p></div>
+<button class="close" id="close-list" type="button" aria-label="Close my garden list"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><line x1="5" y1="5" x2="19" y2="19"></line><line x1="19" y1="5" x2="5" y2="19"></line></svg></button>
+</div>
+<div class="d-body">
+<div id="groups"></div>
+<form class="fields" id="send-form" novalidate>
+<label for="client-name">Your name<input id="client-name" name="client-name" type="text" autocomplete="name"></label>
+<label for="client-notes">Anything Frank should know?<textarea id="client-notes" name="client-notes" placeholder="Favorites from last year, things to skip, how much you like to harvest"></textarea></label>
+</form>
+<details class="fallback">
+<summary>Email app not opening? Copy the list by hand</summary>
+<label class="sr" for="list-text">Your list as text</label>
+<textarea id="list-text" readonly></textarea>
+</details>
+<button class="clear" id="clear-all" type="button">Clear my list</button>
+</div>
+<div class="d-foot">
+<div class="row">
+<a class="btn primary" id="email-link" href="mailto:feroletofrank@gmail.com">Email my list to Frank</a>
+<button class="btn" id="copy-list" type="button">Copy list</button>
+</div>
+<p class="note">Your email app opens with the list filled in. You can also paste your list into a text or an email to feroletofrank@gmail.com.</p>
+<p class="status" id="status" aria-live="polite"></p>
+</div>
+</aside>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function () {
+  var EMAIL = "feroletofrank@gmail.com";
+  var KEY = "fgc-2027-list";
+  var cards = Array.prototype.slice.call(document.querySelectorAll(".card"));
+  var secs = Array.prototype.slice.call(document.querySelectorAll(".sec"));
+  var fbtns = Array.prototype.slice.call(document.querySelectorAll(".fchoice"));
+  var byId = {};
+  cards.forEach(function (c) { byId[c.id] = c; });
+  var state = { picks: {}, franks: {}, name: "", notes: "" };
+  var nameEl = document.getElementById("client-name"), notesEl = document.getElementById("client-notes");
+  var statusEl = document.getElementById("status"), clearBtn = document.getElementById("clear-all");
+  var armed = false, cat = "all", toastTimer = null;
+
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (err) {} }
+  function load() {
+    try {
+      var s = JSON.parse(localStorage.getItem(KEY) || "null");
+      if (s && typeof s === "object") {
+        Object.keys(s.picks || {}).forEach(function (id) { if (byId[id]) state.picks[id] = { extra: !!s.picks[id].extra }; });
+        Object.keys(s.franks || {}).forEach(function (k) { if (s.franks[k]) state.franks[k] = true; });
+        state.name = s.name || ""; state.notes = s.notes || "";
+      }
+    } catch (err) {}
+    nameEl.value = state.name; notesEl.value = state.notes;
+  }
+
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function toast(msg) {
+    var t = document.getElementById("toast");
+    t.textContent = msg; t.classList.add("show");
+    clearTimeout(toastTimer); toastTimer = setTimeout(function () { t.classList.remove("show"); }, 1800);
+  }
+
+  function paintCard(c) {
+    var on = !!state.picks[c.id], b = c.querySelector(".add");
+    c.classList.toggle("on", on);
+    b.setAttribute("aria-pressed", on ? "true" : "false");
+    b.querySelector(".lbl").textContent = on ? "In my garden" : "Add to my garden";
+    b.setAttribute("aria-label", (on ? "Remove " : "Add ") + c.dataset.name + (on ? " from my garden" : " to my garden"));
+  }
+  function paintFranks() { fbtns.forEach(function (b) { b.setAttribute("aria-pressed", state.franks[b.dataset.sec] ? "true" : "false"); }); }
+
+  function grouped() {
+    var out = [];
+    secs.forEach(function (s) {
+      var name = s.querySelector("h2").textContent;
+      var items = Array.prototype.slice.call(s.querySelectorAll(".card")).filter(function (c) { return state.picks[c.id]; });
+      if (items.length || state.franks[name]) out.push({ name: name, items: items, frank: !!state.franks[name] });
+    });
+    return out;
+  }
+
+  function listText() {
+    var g = grouped();
+    var lines = ["Hi Frank,", "", "Here is what I would like in my garden for 2027:"];
+    g.forEach(function (s) {
+      lines.push("", s.name.toUpperCase());
+      s.items.forEach(function (c) { lines.push("- " + c.dataset.name + " (" + c.dataset.type.toLowerCase() + ")" + (state.picks[c.id].extra ? ", plant extra" : "")); });
+      if (s.frank) lines.push("- Your choice of a few");
+    });
+    if (notesEl.value.trim()) lines.push("", "Notes:", notesEl.value.trim());
+    if (nameEl.value.trim()) lines.push("", "Thanks,", nameEl.value.trim());
+    return lines.join("\n");
+  }
+
+  var X = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><line x1="5" y1="5" x2="19" y2="19"></line><line x1="19" y1="5" x2="5" y2="19"></line></svg>';
+  function renderList() {
+    var g = grouped(), html = "";
+    var n = Object.keys(state.picks).length, f = Object.keys(state.franks).length;
+    document.getElementById("badge").textContent = n + f;
+    document.getElementById("d-sum").textContent = n || f ? (n + (n === 1 ? " variety" : " varieties") + (f ? ", plus " + f + (f === 1 ? " section" : " sections") + " for Frank to choose" : "")) : "Nothing picked yet";
+    if (!g.length) html = '<p class="empty">Your list is empty. Tap Add to my garden on any variety and it will show up here.</p>';
+    g.forEach(function (s) {
+      html += '<div class="grp"><h3>' + esc(s.name) + '</h3><ul>';
+      s.items.forEach(function (c) {
+        var ex = state.picks[c.id].extra;
+        html += '<li class="item"><img src="' + c.dataset.img + '" alt=""><div><div class="nm">' + esc(c.dataset.name) + '</div><div class="ty">' + esc(c.dataset.type) + '</div></div>' +
+          '<div class="acts"><button class="extra" type="button" data-extra="' + c.id + '" aria-pressed="' + (ex ? "true" : "false") + '">Plant extra</button>' +
+          '<button class="rm" type="button" data-rm="' + c.id + '" aria-label="Remove ' + esc(c.dataset.name) + '">' + X + '</button></div></li>';
+      });
+      if (s.frank) html += '<li class="item fc-item"><span class="fc-mark" aria-hidden="true">?</span><div><div class="nm">Frank&#39;s choice</div><div class="ty">A few ' + esc(s.name.toLowerCase()) + ' picked for you</div></div>' +
+        '<div class="acts"><button class="rm" type="button" data-rmf="' + esc(s.name) + '" aria-label="Remove Frank&#39;s choice for ' + esc(s.name) + '">' + X + '</button></div></li>';
+      html += '</ul></div>';
+    });
+    document.getElementById("groups").innerHTML = html;
+    var text = listText();
+    document.getElementById("list-text").value = text;
+    var who = nameEl.value.trim();
+    var link = document.getElementById("email-link");
+    link.href = "mailto:" + EMAIL + "?subject=" + encodeURIComponent("2027 garden list" + (who ? " from " + who : "")) + "&body=" + encodeURIComponent(text);
+    link.setAttribute("aria-disabled", g.length ? "false" : "true");
+    document.getElementById("copy-list").setAttribute("aria-disabled", g.length ? "false" : "true");
+  }
+
+  function toggle(c) {
+    if (state.picks[c.id]) { delete state.picks[c.id]; toast("Removed " + c.dataset.name); }
+    else { state.picks[c.id] = { extra: false }; toast("Added " + c.dataset.name + " to your garden"); }
+    paintCard(c); renderList(); save();
+  }
+
+  cards.forEach(function (c) {
+    Array.prototype.forEach.call(c.querySelectorAll("[data-toggle]"), function (el) { el.addEventListener("click", function () { toggle(c); }); });
+  });
+  fbtns.forEach(function (b) {
+    b.addEventListener("click", function () {
+      var k = b.dataset.sec;
+      if (state.franks[k]) delete state.franks[k]; else { state.franks[k] = true; toast("Frank will choose some " + k.toLowerCase() + " for you"); }
+      paintFranks(); renderList(); save();
+    });
+  });
+
+  document.getElementById("groups").addEventListener("click", function (ev) {
+    var b = ev.target.closest("button"); if (!b) return;
+    if (b.dataset.rm) { delete state.picks[b.dataset.rm]; paintCard(byId[b.dataset.rm]); }
+    else if (b.dataset.rmf) { delete state.franks[b.dataset.rmf]; paintFranks(); }
+    else if (b.dataset.extra) { var p = state.picks[b.dataset.extra]; if (p) p.extra = !p.extra; }
+    renderList(); save();
+  });
+  [nameEl, notesEl].forEach(function (el) { el.addEventListener("input", function () { state.name = nameEl.value; state.notes = notesEl.value; renderList(); save(); }); });
+  document.getElementById("send-form").addEventListener("submit", function (ev) { ev.preventDefault(); });
+
+  /* filtering */
+  var q = document.getElementById("q"), nores = document.getElementById("nores");
+  function applyFilter() {
+    var term = q.value.trim().toLowerCase(), shown = 0;
+    secs.forEach(function (s) {
+      var inCat = cat === "all" || s.dataset.cat === cat, vis = 0;
+      Array.prototype.forEach.call(s.querySelectorAll(".card"), function (c) {
+        var ok = inCat && (!term || c.dataset.q.indexOf(term) !== -1);
+        c.hidden = !ok; if (ok) vis++;
+      });
+      s.hidden = vis === 0; shown += vis;
+    });
+    Array.prototype.forEach.call(document.querySelectorAll(".chip"), function (ch) {
+      var s = document.getElementById(ch.getAttribute("href").slice(1)); ch.hidden = s.hidden;
+    });
+    nores.hidden = shown > 0;
+    if (!shown) nores.textContent = "Nothing matches “" + q.value.trim() + "”. Try another word, or clear the search.";
+  }
+  q.addEventListener("input", applyFilter);
+  Array.prototype.forEach.call(document.querySelectorAll(".tab"), function (t) {
+    t.addEventListener("click", function () {
+      cat = t.dataset.cat;
+      Array.prototype.forEach.call(document.querySelectorAll(".tab"), function (o) { o.setAttribute("aria-pressed", o === t ? "true" : "false"); });
+      applyFilter();
+      var bar = document.getElementById("catalog");
+      if (bar.getBoundingClientRect().top > 1) bar.scrollIntoView();
+      else window.scrollTo(0, window.scrollY + document.querySelector("main").getBoundingClientRect().top - bar.offsetHeight);
+    });
+  });
+
+  /* drawer */
+  var opener = null;
+  function openList() { opener = document.activeElement; statusEl.textContent = ""; renderList(); document.body.classList.add("open"); document.getElementById("d-title").focus(); }
+  function closeList() { document.body.classList.remove("open"); armed = false; clearBtn.textContent = "Clear my list"; if (opener && opener.focus) opener.focus(); }
+  document.getElementById("open-list").addEventListener("click", openList);
+  document.getElementById("close-list").addEventListener("click", closeList);
+  document.getElementById("scrim").addEventListener("click", closeList);
+  document.addEventListener("keydown", function (ev) { if (ev.key === "Escape" && document.body.classList.contains("open")) closeList(); });
+
+  document.getElementById("email-link").addEventListener("click", function () {
+    statusEl.textContent = "If your email app did not open, use Copy list and send it to " + EMAIL + ".";
+  });
+  document.getElementById("copy-list").addEventListener("click", function () {
+    var text = listText();
+    function fail() {
+      statusEl.textContent = "Could not copy automatically. Open the box below and copy the text yourself.";
+      var d = document.querySelector(".fallback"); d.open = true; document.getElementById("list-text").select();
+    }
+    try { navigator.clipboard.writeText(text).then(function () { statusEl.textContent = "Copied. Paste it into an email or text to Frank."; }, fail); }
+    catch (err) { fail(); }
+  });
+  clearBtn.addEventListener("click", function () {
+    if (!armed) { armed = true; clearBtn.textContent = "Tap again to remove everything"; return; }
+    state.picks = {}; state.franks = {}; armed = false; clearBtn.textContent = "Clear my list";
+    cards.forEach(paintCard); paintFranks(); renderList(); save(); statusEl.textContent = "Your list is empty.";
+  });
+
+  load(); cards.forEach(paintCard); paintFranks(); renderList(); applyFilter();
+})();
+</script>
+</body>
+</html>
