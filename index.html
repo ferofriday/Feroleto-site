@@ -71,8 +71,9 @@ h2.sec-title { margin: 0; font-family: var(--display); font-weight: 400; font-si
 }
 
 /* ---------- about ---------- */
-.about { padding: 110px 0 90px; }
-.about .wrap { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 64px; align-items: start; }
+.about { padding: 96px 0 80px; }
+.about .wrap { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 64px; align-items: baseline; }
+.about .body p { font-size: clamp(19px, 1.7vw, 22px); line-height: 1.55; margin: 0; }
 .about .big { margin: 0; font-size: clamp(26px, 3vw, 38px); line-height: 1.3; font-style: italic; text-wrap: pretty; }
 .about .big b { font-style: normal; color: var(--beet); }
 .about .body p { margin: 0 0 18px; max-width: 34em; text-wrap: pretty; }
@@ -239,18 +240,9 @@ footer p { margin: 0; font-size: 15px; }
 <main>
 <section class="about" id="about" aria-labelledby="about-h">
 <div class="wrap">
-<div>
 <h2 class="sec-title" id="about-h">About</h2>
-<p class="big" style="margin-top: 26px">A garden should feed the table and fill the vase, from the first spring greens to the last dahlias before frost.</p>
-</div>
 <div class="body">
-<p>I have grown food and flowers organically for more than fifteen years, starting most of my plants from seed. Through Feroleto Garden Co., I bring that work to private gardens across Fairfield County: planning what to grow, building the beds, and tending them through the season.</p>
-<p>I keep my client list small on purpose. Every garden is planned around the people who live with it, and I am the one who looks after it, visit by visit.</p>
-<dl class="facts">
-<div><dt>15+</dt><dd>years growing organically</dd></div>
-<div><dt>142</dt><dd>varieties in the 2027 catalog</dd></div>
-<div><dt>60+</dt><dd>beds managed at Wakeman Town Farm</dd></div>
-</dl>
+<p>I'm an organic grower with more than fifteen years of experience. I run Feroleto Garden Co., caring for a small number of private gardens across Fairfield County, and I manage the market garden at Wakeman Town Farm in Westport.</p>
 </div>
 </div>
 </section>
@@ -262,10 +254,10 @@ footer p { margin: 0; font-size: 15px; }
 <div class="svc-body">
 <p class="svc-intro">Four services, offered together or on their own. Everything I use in your garden is organic and OMRI-listed.</p>
 <ol class="svc-list">
-<li><h3>Regular garden care</h3><p>Scheduled visits from spring through fall for planting, weeding, feeding, staking and harvest, so the garden looks its best every week of the season.</p></li>
-<li><h3>Raised bed builds</h3><p>Beds designed around your property and your light, built, filled with rich organic soil and ready to plant.</p></li>
-<li><h3>Seasonal planning</h3><p>A planting plan for each season, chosen with you from my annual catalog, with crop rotations that keep the beds productive year after year.</p></li>
-<li><h3>Soil health</h3><p>Soil testing and organic amendments that build fertility over time, so plants grow stronger and need less help.</p></li>
+<li><h3>Regular garden care</h3><p>Scheduled visits from spring through fall for planting, weeding, feeding, staking and harvest.</p></li>
+<li><h3>Raised bed builds</h3><p>Beds designed for your property, built and filled with organic soil, ready to plant.</p></li>
+<li><h3>Seasonal planning</h3><p>A planting plan for each season, chosen with you from my annual catalog, with crop rotations to keep the beds productive.</p></li>
+<li><h3>Soil health</h3><p>Soil testing and organic amendments to build fertility over time.</p></li>
 </ol>
 <div class="area"><span>Serving</span>Westport, Fairfield, Weston, Easton, Norwalk, Wilton, New Canaan and Darien</div>
 <a class="btn" href="#contact">Inquire about a garden</a>
@@ -278,7 +270,7 @@ footer p { margin: 0; font-size: 15px; }
 <div>
 <p class="kicker">For clients of Feroleto Garden Co.</p>
 <h2 id="cat-h">2027 <span>Garden Catalog</span></h2>
-<p class="copy">Each year I publish a catalog of everything I will grow for the coming season. For 2027 it holds 142 varieties of vegetables, herbs, fruit and flowers. Clients choose what they would like in their garden, send me their list, and I plan their beds around it.</p>
+<p class="copy">Each year I publish a catalog of the vegetables, herbs, fruit and flowers I will grow for the coming season. Clients choose what they would like and send me their list, and I plan their beds around it.</p>
 <a class="btn" href="catalog/index.html">Browse the 2027 catalog</a>
 </div>
 <div class="stack"><div class="pv pv0" aria-hidden="true"><img src="catalog/img/005.webp" alt=""><div class="pv-t"><b>Speckled Roman</b><i>Striped paste</i><span class="pv-add"><span class="pv-box"></span>Add to my garden</span></div></div><div class="pv pv1" aria-hidden="true"><img src="catalog/img/132.webp" alt=""><div class="pv-t"><b>Café au Lait</b><i>Blush dinnerplate dahlia</i><span class="pv-add"><span class="pv-box"></span>In my garden</span></div></div><div class="pv pv2" aria-hidden="true"><img src="catalog/img/055.webp" alt=""><div class="pv-t"><b>Bright Lights</b><i>Swiss chard</i><span class="pv-add"><span class="pv-box"></span>Add to my garden</span></div></div></div>
@@ -291,11 +283,11 @@ footer p { margin: 0; font-size: 15px; }
 <div class="job-txt">
 <h2 class="job-h" id="wtf-h">Wakeman Town Farm</h2>
 <p class="role">Market garden manager</p>
-<p>Wakeman Town Farm is a nonprofit educational homestead in Westport. As market garden manager, I oversee vegetable and cut flower production across more than sixty beds, supply the farmstand through the season, and work alongside the volunteers and interns who come to learn.</p>
+<p>Wakeman Town Farm is a nonprofit educational homestead in Westport. As market garden manager, I oversee vegetable and cut flower production, supply the farmstand, and work with the volunteers and interns who come to learn.</p>
 <ul>
-<li><span>The garden</span><span>Sixty-plus beds of vegetables and cut flowers</span></li>
-<li><span>The farmstand</span><span>Fresh harvests from early summer to frost</span></li>
-<li><span>Teaching</span><span>Volunteers and interns, learning by doing</span></li>
+<li><span>The garden</span><span>Vegetables and cut flowers</span></li>
+<li><span>The farmstand</span><span>Fresh harvests through the season</span></li>
+<li><span>Teaching</span><span>Volunteers and interns</span></li>
 </ul>
 <p class="more"><a href="https://www.wakemantownfarm.org">Visit wakemantownfarm.org</a></p>
 </div>
